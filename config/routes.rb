@@ -1,13 +1,11 @@
 Luchia::Application.routes.draw do
   resources :users
+  resources :portfolios
+  resources :journals
 
   get "contact/index"
   get "about/index"
   get "home/index"
-
-  resources :portfolios
-
-  resources :journals
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
