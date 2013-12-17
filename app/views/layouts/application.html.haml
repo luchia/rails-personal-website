@@ -1,0 +1,24 @@
+!!!
+%html
+%head
+	%title Luchia Bloomfield
+	= stylesheet_link_tag "application", controller.controller_name
+	= javascript_include_tag "application", controller.controller_name
+	= csrf_meta_tags
+	%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+
+%body
+	%div{ :id => "nav" }
+		%ul{ :class => "nav" }
+			%li
+				%a{ :href => "/index" } Home
+			%li
+				%a{ :href => "/about" } About
+			%li
+				%a{ :href => "/work" } Work
+			%li
+				%a{ :href => "/journals" } Journal
+			%li
+				%a{ :href => "/contact" } Get in Touch
+
+	= yield
