@@ -95,7 +95,7 @@ a:hover {
 
 #home {
 	height: 620px;
-	background:url("../images/bg.jpg") no-repeat;
+	background:url("bg.jpg") no-repeat;
 	background-color: #000000;
 	background-position: fixed;
 	display: block;
@@ -114,7 +114,7 @@ a:hover {
 
 #work-home {
 	height: 620px;
-	background:url("../images/bg3.jpg") no-repeat;
+	background:url("bg3.jpg") no-repeat;
 	background-color: #000000;
 	background-position: fixed;
 	display: block;
@@ -130,7 +130,7 @@ a:hover {
 }
 
 #about-home {
-	background:url("../images/bg2.jpg") no-repeat;
+	background:url("bg2.jpg") no-repeat;
 	background-color: #000000;
 	background-position: fixed;
 	display: block;
@@ -148,7 +148,7 @@ a:hover {
 
 #contact {
 	height: 450px;
-	background:url("../images/brisbane.jpg") no-repeat;
+	background:url("brisbane.jpg") no-repeat;
 	background-color: #e3e3e3;
 	background-position: fixed;
 	display: block;

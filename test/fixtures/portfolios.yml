@@ -9,3 +9,8 @@ two:
   title: MyString
   date: 2013-12-17 12:26:58
   content: MyString
+
+ruby:
+  title: Building a portfolio site
+  date: 2013-12-16 17:30:59
+  content: Building my first blog hasn't been easy. Rails is all very new and strange to me. I wonder what it will be like to use this in a years time.

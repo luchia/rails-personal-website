@@ -1,7 +1,12 @@
 require 'test_helper'
 
 class PortfolioTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+	fixtures :portfolios
+  	
+	test "portfolio attributes must not be empty" do
+		portfolio = Journal.new
+		assert portfolio.invalid?
+		assert portfolio.errors[:title].any?
+		assert portfolio.errors[:content].any?
+	end
 end
