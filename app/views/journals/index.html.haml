@@ -19,7 +19,7 @@
       %div{ :class => "col-md-offset-2 col-md-8" }
         %br
         - @journals.each do |journal|
-          %h2
+          %h3
             = link_to journal.title, journal
           %h5
             = journal.date
