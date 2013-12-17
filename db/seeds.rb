@@ -9,3 +9,7 @@
 Journal.delete_all
 
 Journal.create!(title: 'My Blog Post', date: Time.now, content: 'I think I like drugs a lot, I think I like drugs a lot, I think I like drugs a lot, I think I like drugs a lot, I think I like drugs a lot, I think I like drugs a lot, I think I like drugs a lot.')
+
+Portfolio.delete_all
+
+Portfolio.create!(title: 'Portfolio Work 1', date: Time.now, content: 'This is my art piece on absolutely nothing, This is my art piece on absolutely nothing, This is my art piece on absolutely nothing.')
