@@ -1,0 +1,19 @@
+%div{ :id => "footer" }
+	%div{ :class => "container" }
+		%section
+			%a{ :href => "#about" }
+				%span{ :class => "glyphicon glyphicon-arrow-down centered" }
+
+%div{ :id => "footer" }
+	%div{ :class => "container" }
+		%div{ :id => "text-container" }
+			%div{ :class => "col-md-offset-2 col-md-8" }
+				%br
+				%p{ :id => "notice" }
+					= notice
+				%h2{ :class => "orange" } Name:
+
+				%h5{ :class => "grey" }
+					= @user.name
+
+				= link_to 'Back', users_path

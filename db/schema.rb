@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131217022658) do
+ActiveRecord::Schema.define(version: 20131217035700) do
 
   create_table "journals", force: true do |t|
     t.string   "title"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 20131217022658) do
     t.string   "title"
     t.datetime "date"
     t.string   "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,4 +1,6 @@
 Luchia::Application.routes.draw do
+  resources :users
+
   get "contact/index"
   get "about/index"
   get "home/index"
