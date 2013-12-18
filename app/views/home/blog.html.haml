@@ -7,12 +7,6 @@
             Ramblings
           %h5{ :class => "grey" } about Design, Photography & Travel
 
-%div{ :id => "footer" }
-  %div{ :class => "container" }
-    %section
-      %a{ :href => "#about" }
-        %span{ :class => "glyphicon glyphicon-arrow-down centered" }
-
 %div{ :id => "about" }
   %div{ :class => "container" }
     %div{ :id => "text-container" }
@@ -20,7 +14,7 @@
         %br
         - @journals.each do |journal|
           %h3
-            = link_to journal.title, journal
+            %a{ :href => '/journals/'+journal.id.to_s }=journal.title
           %h5
             = journal.date
           %h5{ :class => "grey" }

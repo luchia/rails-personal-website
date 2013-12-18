@@ -7,13 +7,6 @@
 						Hello, I'm Luchia.
 					%h5{ :class => "grey" } Scroll down to learn more.
 
-
-%div{ :id => "footer" }
-	%div{ :class => "container" }
-		%section
-			%a{ :href => "#about"}
-				%span{ :class => "glyphicon glyphicon-arrow-down centered" }
-
 %div{ :id => "about" }
 	%div{ :class => "container" }
 		%div{ :id => "text-container" }
@@ -44,8 +37,9 @@
 				%div{ :class => "row" }
 					-@portfolios.each do |portfolio|
 						%div{ :class => "col-md-4" }
-							%h3=link_to portfolio.title, portfolio
-							%h5=truncate(strip_tags(portfolio.content), length: 80)
+							%h3
+								%a{ :href => 'portfolios/'+portfolio.id.to_s }=portfolio.title
+							%h5=truncate(strip_tags(portfolio.content), length: 80)	
 
 				%p{ :class => "left-aligned white" }
 					%br

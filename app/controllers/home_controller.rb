@@ -5,11 +5,11 @@ class HomeController < ApplicationController
   	@portfolios = Portfolio.last(3)
   end
 
-  def portfolio
+  def port
   	@portfolios = Portfolio.all
   end
 
-  def journal
+  def blog
   	@journals = Journal.all
   end
 

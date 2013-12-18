@@ -1,7 +1,10 @@
-%h1
-	Editing Journal
+%div{ :id => "work" }
+	%div{ :class => "container" }
+		%div{ :id => "text-container" }
+			%div{ :class => "row" }
+				%div{ :class => "col-md-8 col-md-offset-2" }
+					%h2{ :class => "orange" } Edit Journal Entry
 
-= render 'form'
+					= render 'form'
 
-= link_to 'Show', @journal
-= link_to 'Back', journals_path
+					= link_to 'Back', journals_path

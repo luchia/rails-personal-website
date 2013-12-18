@@ -85,7 +85,7 @@ a:hover {
 	display: inline;
 }
 
-.nav li a:hover {
+.nav li a:hover, .nav li a:focus {
 	color: orange;
 	background-color: #000000;
 }

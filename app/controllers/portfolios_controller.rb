@@ -1,10 +1,12 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :authorize, :only => [:show]
 
   # GET /portfolios
   # GET /portfolios.json
   def index
     @portfolios = Portfolio.all
+    render :layout => 'adminlayout'
   end
 
   # GET /portfolios/1
@@ -15,10 +17,12 @@ class PortfoliosController < ApplicationController
   # GET /portfolios/new
   def new
     @portfolio = Portfolio.new
+    render :layout => 'adminlayout'
   end
 
   # GET /portfolios/1/edit
   def edit
+    render :layout => 'adminlayout'
   end
 
   # POST /portfolios

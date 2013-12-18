@@ -1,10 +1,12 @@
 class JournalsController < ApplicationController
   before_action :set_journal, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :authorize, :only => [:show]
 
   # GET /journals
   # GET /journals.json
   def index
     @journals = Journal.all
+    render :layout => 'adminlayout'
   end
 
   # GET /journals/1
@@ -19,6 +21,7 @@ class JournalsController < ApplicationController
 
   # GET /journals/1/edit
   def edit
+    render :layout => 'adminlayout'
   end
 
   # POST /journals

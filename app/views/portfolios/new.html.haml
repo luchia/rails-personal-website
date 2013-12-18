@@ -1,6 +1,10 @@
-%h1
-	New Portfolio Entry
+%div{ :id => "work" }
+	%div{ :class => "container" }
+		%div{ :id => "text-container" }
+			%div{ :class => "row" }
+				%div{ :class => "col-md-8 col-md-offset-2" }
+					%h2{ :class => "orange" } New Portfolio Entry
 
-= render 'form'
+					= render 'form'
 
-= link_to 'Back', portfolios_path
+					= link_to 'Back', portfolios_path
