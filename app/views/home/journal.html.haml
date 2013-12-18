@@ -1,0 +1,30 @@
+%div{ :id => "work-home" }
+  %section
+    %div{ :class => "container" }
+      %div{ :class => "row"}
+        %div{ :class => "col-md-offset-4 col-md-8" }
+          %h1{ :class => "orange italic slogan" } 
+            Ramblings
+          %h5{ :class => "grey" } about Design, Photography & Travel
+
+%div{ :id => "footer" }
+  %div{ :class => "container" }
+    %section
+      %a{ :href => "#about" }
+        %span{ :class => "glyphicon glyphicon-arrow-down centered" }
+
+%div{ :id => "about" }
+  %div{ :class => "container" }
+    %div{ :id => "text-container" }
+      %div{ :class => "col-md-offset-2 col-md-8" }
+        %br
+        - @journals.each do |journal|
+          %h3
+            = link_to journal.title, journal
+          %h5
+            = journal.date
+          %h5{ :class => "grey" }
+            = truncate(strip_tags(journal.content), length: 80)
+          %br
+          %br
+          %br

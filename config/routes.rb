@@ -2,6 +2,9 @@ Luchia::Application.routes.draw do
   get 'admin' => 'admin#index'
   get 'contact' => 'contact#index'
   get 'about' => 'about#index'
+  get 'portfolio' => 'home#portfolio'
+  get 'journal' => 'home#journal'
+
 
   controller :sessions do
     get 'login' => :new

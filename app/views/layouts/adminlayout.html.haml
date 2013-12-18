@@ -14,5 +14,7 @@
 				%a{ :href => "/portfolios" } Work
 			%li
 				%a{ :href => "/journals" } Journal
+			%li
+				=link_to 'Log Out', logout_path, method: :delete
 
 	= yield

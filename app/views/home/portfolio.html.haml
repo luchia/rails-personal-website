@@ -1,0 +1,34 @@
+%div{ :id => "work-home" }
+  %section
+    %div{ :class => "container" }
+      %div{ :class => "row"}
+        %div{ :class => "col-md-offset-4 col-md-8" }
+          %h1{ :class => "orange italic slogan" } 
+            Discoveries
+          %h5{ :class => "grey" } through Branding, Web Design & other Mediums
+
+%div{ :id => "footer" }
+  %div{ :class => "container" }
+    %section
+      %a{ :href => "#about" }
+        %span{ :class => "glyphicon glyphicon-arrow-down centered" }
+
+%div{ :id => "about" }
+  %div{ :class => "container" }
+    %div{ :id => "text-container" }
+      %div{ :class => "row" }
+
+        - @portfolios.each do |portfolio|
+          %div{ :class => "col-md-4" }
+            %h3=link_to portfolio.title, portfolio
+            %h5=truncate(strip_tags(portfolio.content), length: 80)
+
+%div{ :id => "contact" }
+  %div{ :class => "container" }
+    %div{ :class => "pushdown" }
+      %section
+        %h2
+          %span{ :class => "brisbane" } 
+            Like what you see? 
+            %a{ :href => "/contact/index" } 
+              Hire Me
