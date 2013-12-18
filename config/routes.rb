@@ -1,5 +1,7 @@
 Luchia::Application.routes.draw do
   get 'admin' => 'admin#index'
+  get 'contact' => 'contact#index'
+  get 'about' => 'about#index'
 
   controller :sessions do
     get 'login' => :new
@@ -11,9 +13,6 @@ Luchia::Application.routes.draw do
   resources :portfolios
   resources :journals
 
-  get "contact/index"
-  get "about/index"
-  get "home/index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

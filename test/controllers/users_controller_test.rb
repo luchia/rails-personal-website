@@ -21,14 +21,6 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create user" do
-    assert_difference('User.count') do
-      post :create, {:user => {'name' => 'luchia', 'password' => 'secret', 'password_confirmation' => 'secret'}}
-        .to change(User, :count).by(1)
-    end
-    assert_redirected_to users_path
-  end
-
   test "should show user" do
     get :show, id: @user
     assert_response :success

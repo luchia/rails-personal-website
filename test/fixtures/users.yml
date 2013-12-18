@@ -7,4 +7,4 @@ one:
 
 two:
   name: admin
-  password_digest: <%= BCrypt::Password.create('blah') %>
+  password_digest: <%= BCrypt::Password.create('secret') %>
