@@ -14,7 +14,8 @@
 
         - @portfolios.each do |portfolio|
           %div{ :class => "col-md-4" }
-            %h3=link_to portfolio.title, portfolio
+            %h3
+              %a{ :href => 'portfolios/'+portfolio.id.to_s }=portfolio.title
             %h5=truncate(strip_tags(portfolio.content), length: 80)
 
 %div{ :id => "contact" }
@@ -24,5 +25,5 @@
         %h2{ :class => "text-center" }
           %span{ :class => "brisbane" } 
             Like what you see? 
-            %a{ :href => "/contact/index" } 
+            %a{ :href => "/contact" } 
               Hire Me

@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.order(:name)
+    render :layout => 'adminlayout'
   end
 
   # GET /users/1

@@ -49,11 +49,13 @@ h5 {
 
 a {
 	font-family: 'Ruda', sans-serif;
+	background-color: transparent;
 }
 
-a:hover {
+a:hover, a:focus, a:visited {
 	text-decoration: none;
 	font-family: 'Ruda', sans-serif;
+	background-color: transparent;
 }
 
 
@@ -248,4 +250,16 @@ a:hover {
     display: block;
     margin-left: auto;
     margin-right: auto 
+}
+
+/* Fields */
+
+label {
+	color: #656565;
+}
+
+input {
+	background-color: transparent;
+	border: none;
+	color: #e7e7e7;
 }
