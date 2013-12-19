@@ -3,8 +3,6 @@
 		%div{ :id => "text-container" }
 			%div{ :class => "col-md-offset-2 col-md-8" }
 				%br
-				%p{ :id => "notice" }
-					= notice
 				%h2{ :class => "orange" }
 					= @journal.title
 
@@ -12,7 +10,7 @@
 					= @journal.date
 
 				%h5{ :class => "grey" }
-					= @journal.content
+					=markdown(@journal.content).html_safe
 
 				%h5
 					%a{ :href => "/journal/" } Back

@@ -11,7 +11,7 @@
 	%div{ :class => "container" }
 		%div{ :id => "text-container" }
 			%h1{ :class => "white text-center" } 
-				I like to design, develop & take photos - yup, multi-talented.
+				I design, develop & take photos - yup, multi-talented.
 			%br
 			%div{ :class => "row" }
 				%div{ :class => "col-md-4" }
@@ -37,7 +37,7 @@
 						%div{ :class => "col-md-4" }
 							%h3
 								%a{ :href => 'portfolios/'+portfolio.id.to_s }=portfolio.title
-							%h5=truncate(strip_tags(portfolio.content), length: 80)	
+							%h5{ :class => "grey" }=truncate(strip_tags(portfolio.content), length: 80)	
 
 				%p{ :class => "left-aligned white" }
 					%br
