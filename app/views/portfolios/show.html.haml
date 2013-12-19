@@ -10,7 +10,6 @@
 					= @portfolio.date
 
 				%h5{ :class => "grey" }
-					= @portfolio.content
-
+					=markdown(@portfolio.content).html_safe
 				%h5
 					%a{ :href => "/portfolio/" } Back
