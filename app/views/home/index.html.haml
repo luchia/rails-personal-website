@@ -35,7 +35,7 @@
 				%div{ :class => "row" }
 					-@portfolios.each do |portfolio|
 						%div{ :class => "col-md-4" }
-							%h3
+							%h3{ :class => "white" g776895547}
 								%a{ :href => 'portfolios/'+portfolio.id.to_s }=portfolio.title
 							%h5{ :class => "grey" }=truncate(strip_tags(portfolio.content), length: 80)	
 
