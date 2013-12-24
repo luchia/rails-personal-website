@@ -16,7 +16,7 @@
           %div{ :class => "col-md-4" }
             %h3
               %a{ :href => '/portfolios/'+portfolio.id.to_s }=portfolio.title
-            %h5=truncate(strip_tags(portfolio.content), length: 80)
+            %h5{ :class => 'grey' }=truncate(strip_tags(portfolio.content), length: 80)
 
 %div{ :id => "contact" }
   %div{ :class => "container" }
