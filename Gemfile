@@ -39,7 +39,7 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem 'redcarpet'
 
-gem 'nokogiri'
+gem 'rails_12factor'
 
 # Use unicorn as the app server
 # gem 'unicorn'

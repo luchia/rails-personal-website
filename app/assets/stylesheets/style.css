@@ -50,6 +50,7 @@ h5 {
 a {
 	font-family: 'Ruda', sans-serif;
 	background-color: transparent;
+	color: #656565;
 }
 
 a:hover, a:focus, a:visited {
