@@ -15,7 +15,10 @@ test: &TEST
 production:
   adapter: postgresql
   encoding: utf8
-  database: lucybloomfield
+  port: 5432
+  database: dcntjcv828tvj5
+  username: njkythkcissgux
+  password: 9TzVLa_-0KWNd1ujE1dlfOYGGV
 
 cucumber:
   <<: *TEST
