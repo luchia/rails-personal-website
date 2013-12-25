@@ -12,18 +12,22 @@
 
   %div{ :class => "field" }
     = f.label :title
+    %br 
     %br
     = f.text_field :title
 
   %div{ :class => "field" }
     = f.label :date
     %br
-    = f.datetime_select :date
+    %br
+    = f.date_select("set_date", "written_on", :order => [:year, :month])
 
   %div{ :class => "field" }
     = f.label :content
     %br
+    %br
     = f.text_area :content, rows: 10
+    %br
 
   %div{ :class => "actions" }
     = f.submit

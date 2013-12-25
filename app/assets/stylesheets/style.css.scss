@@ -256,18 +256,36 @@ a:hover, a:focus, a:visited {
 /* Fields */
 
 label {
-	color: #656565;
+	color: #e7e7e7;
 }
 
 input {
-	background-color: #e7e7e7;
-	border: none;
-	color: #000000;
+	font-family: 'Ruda', sans-serif;
+	letter-spacing: 0.5px;
+	line-height: 2em;
+	color: #656565;
+	background: #000000;
+	border: 1px solid #444444;
+}
+
+button, select {
+	font-family: 'Ruda', sans-serif;
+	letter-spacing: 0.5px;
+	color: #e7e7e7;
+	background: #000000;
+	border: 1px solid #444444;
 }
 
 textarea {
-	max-width: 100%;
+	width: 400px;
+	height: 300px;
+	font-family: 'Ruda', sans-serif;
+	letter-spacing: 0.5px;
+	color: #656565;
+	background: #000000;
+	border: 1px solid #444444;
 }
+
 
 /* Mark Up Area */
 

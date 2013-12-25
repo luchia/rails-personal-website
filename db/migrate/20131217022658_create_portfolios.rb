@@ -2,7 +2,7 @@ class CreatePortfolios < ActiveRecord::Migration
   def change
     create_table :portfolios do |t|
       t.string :title
-      t.datetime :date
+      t.date :date
       t.string :content
 
       t.timestamps
