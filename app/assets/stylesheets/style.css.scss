@@ -98,7 +98,7 @@ a:hover, a:focus, a:visited {
 
 #home {
 	height: 620px;
-	background-image: image-url('bg.jpg') no-repeat;
+	background-image: image-url('bg.jpg');
 	background-color: #000000;
 	background-position: fixed;
 	display: block;
@@ -117,7 +117,7 @@ a:hover, a:focus, a:visited {
 
 #work-home {
 	height: 620px;
-	background-image: url(image_path('bg3.jpg')) no-repeat;
+	background-image: url(image_path('bg3.jpg'));
 	background-color: #000000;
 	background-position: fixed;
 	display: block;
@@ -133,7 +133,7 @@ a:hover, a:focus, a:visited {
 }
 
 #about-home {
-	background-image: url(image_path('bg2.jpg')) no-repeat;
+	background-image: url(image_path('bg2.jpg'));
 	background-color: #000000;
 	background-position: fixed;
 	display: block;
@@ -151,7 +151,7 @@ a:hover, a:focus, a:visited {
 
 #contact {
 	height: 450px;
-	background-image: url(image_path('brisbane.jpg')) no-repeat;
+	background-image: url(image_path('brisbane.jpg'));
 	background-color: #e3e3e3;
 	background-position: fixed;
 	display: block;
