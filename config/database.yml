@@ -15,10 +15,7 @@ test: &TEST
 production:
   adapter: postgresql
   encoding: utf8
-  database: luchia_production
-  pool: 5
-  username: 
-  password:
+  database: lucybloomfield
 
 cucumber:
   <<: *TEST
