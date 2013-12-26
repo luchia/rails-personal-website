@@ -17,6 +17,7 @@ class JournalsController < ApplicationController
   # GET /journals/new
   def new
     @journal = Journal.new
+    render :layout => 'adminlayout'
   end
 
   # GET /journals/1/edit
