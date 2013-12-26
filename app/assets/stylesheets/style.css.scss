@@ -53,10 +53,17 @@ a {
 	color: #656565;
 }
 
-a:hover, a:focus, a:visited {
+a:focus, a:visited {
 	text-decoration: none;
 	font-family: 'Ruda', sans-serif;
 	background-color: transparent;
+	color: #656565;
+}
+
+a:hover {
+	color: #FFFFFF;
+	background-color: transparent;
+	text-decoration: none;
 }
 
 
@@ -166,7 +173,7 @@ a:hover, a:focus, a:visited {
 }
 
 #work {
-	background-color: #000000;
+	background-color: #e7e7e7;
 	display: block;
 	max-width: 100%;
 }
@@ -183,7 +190,7 @@ a:hover, a:focus, a:visited {
 }
 
 #footer {
-	background-color: #000000;
+	background-color: #e7e7e7;
 	display: block;
 	max-width: 100%;
 	padding-top: 10px;
