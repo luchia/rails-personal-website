@@ -37,7 +37,7 @@
 						%div{ :class => "col-md-4" }
 							%h3{ :class => "white" }
 								%a{ :href => '/portfolios/'+portfolio.id.to_s }=portfolio.title
-							%p{ :class => "grey" }=strip_tags(portfolio.content)
+							%p{ :class => "grey" }=truncate(strip_tags(portfolio.content), length: 80)
 
 				%p{ :class => "left-aligned white" }
 					%br
