@@ -1,4 +1,5 @@
 Luchia::Application.routes.draw do
+  get 'blog' => 'blog#index'
   get 'work' => 'work#index'
   get 'admin' => 'admin#index'
   get 'contact' => 'contact#index'
