@@ -36,13 +36,13 @@
 					-@portfolios.each do |portfolio|
 						%div{ :class => "col-md-4" }
 							%h3{ :class => "white" }
-								%a{ :href => 'portfolios/'+portfolio.id.to_s }=portfolio.title
+								%a{ :href => '/portfolios/'+portfolio.id.to_s }=portfolio.title
 							%h5{ :class => "grey" }=strip_tags(portfolio.content)
 
 				%p{ :class => "left-aligned white" }
 					%br
 					%br
-					%a{ :href => "/portfolio/" }
+					%a{ :href => "/work/" }
 						See more
 
 %div{ :id => "contact" }
