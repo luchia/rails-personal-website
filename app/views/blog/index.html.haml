@@ -1,0 +1,24 @@
+%div{ :id => "work-home" }
+  %section
+    %div{ :class => "container" }
+      %div{ :class => "row"}
+        %div{ :class => "col-md-offset-4 col-md-8" }
+          %h1{ :class => "orange italic slogan" } 
+            Ramblings
+          %h5{ :class => "grey" } about Design, Photography & Travel
+
+%div{ :id => "about" }
+  %div{ :class => "container" }
+    %div{ :id => "text-container" }
+      %div{ :class => "col-md-offset-2 col-md-8" }
+        %br
+        - @journals.each do |journal|
+          %h3
+            %a{ :href => '/journals/'+journal.id.to_s }=journal.title
+          %h5
+            = journal.date
+          %h5{ :class => "grey" }
+            = truncate(strip_tags(journal.content), length: 80)
+          %br
+          %br
+          %br

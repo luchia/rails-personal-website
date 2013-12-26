@@ -20,7 +20,7 @@
     = f.label :date
     %br
     %br
-    = f.date_select("set_date", "written_on", :order => [:year, :month])
+    = f.datetime_select :date
 
   %div{ :class => "field" }
     = f.label :content
