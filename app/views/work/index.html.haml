@@ -5,7 +5,7 @@
         %div{ :class => "col-md-offset-4 col-md-8" }
           %h1{ :class => "orange italic slogan" } 
             Discoveries
-          %h5{ :class => "grey" } through Branding, Web Design & other Mediums
+          %p{ :class => "grey" } through Branding, Web Design & other Mediums
 
 %div{ :id => "about" }
   %div{ :class => "container" }
@@ -16,7 +16,7 @@
           %div{ :class => "col-md-4" }
             %h3
               %a{ :href => '/portfolios/'+portfolio.id.to_s }=portfolio.title
-            %h5{ :class => 'grey' }=truncate(strip_tags(portfolio.content), length: 80)
+            %p{ :class => 'grey' }=truncate(strip_tags(portfolio.content), length: 80)
 
 %div{ :id => "contact" }
   %div{ :class => "container" }

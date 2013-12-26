@@ -15,9 +15,9 @@
         - @journals.each do |journal|
           %h3
             %a{ :href => '/journals/'+journal.id.to_s }=journal.title
-          %h5
+          %p
             = journal.date
-          %h5{ :class => "grey" }
+          %p{ :class => "grey" }
             = truncate(strip_tags(journal.content), length: 80)
           %br
           %br

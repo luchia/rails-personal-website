@@ -3,5 +3,4 @@ class ChangeJournalAndPortfolioStringToText < ActiveRecord::Migration
   	change_column :portfolios, :content, :text
   	change_column :journals, :content, :text
   end
-
 end

@@ -6,11 +6,11 @@
 				%h2{ :class => "orange" }
 					= @portfolio.title
 
-				%h5{ :class => "italic" }
+				%p{ :class => "italic" }
 					= @portfolio.date
 
-				%h5{ :class => "grey" }
+				%p{ :class => "grey" }
 					=markdown(@portfolio.content).html_safe
 					
-				%h5
+				%p
 					%a{ :href => "/work/" } Back

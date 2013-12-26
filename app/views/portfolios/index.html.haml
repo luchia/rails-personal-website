@@ -4,12 +4,12 @@
       %div{ :class => "row" }
         %div{ :class => "col-md-8 col-md-offset-2" }
           %h2{ :class => "orange" } Portfolio
-          %h5{ :class => "left-aligned" }=link_to 'New Entry', new_portfolio_path
+          %p{ :class => "left-aligned" }=link_to 'New Entry', new_portfolio_path
           %br
 
           - @portfolios.each do |portfolio|
             %h3
               %a{ :href => '/portfolios/'+portfolio.id.to_s }=portfolio.title
-            %h5=portfolio.content
-            %h5=link_to 'Edit', edit_portfolio_path(portfolio)
-            %h5=link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' }
+            %p=portfolio.content
+            %p=link_to 'Edit', edit_portfolio_path(portfolio)
+            %p=link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' }

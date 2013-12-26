@@ -5,7 +5,7 @@
 				%div{ :class => "col-md-offset-4 col-md-8" }
 					%h1{ :class => "orange slogan italic" } 
 						Hello, I'm Luchia.
-					%h5{ :class => "grey" } Scroll down to learn more.
+					%p{ :class => "grey" } Scroll down to learn more.
 
 %div{ :id => "about" }
 	%div{ :class => "container" }
@@ -16,15 +16,15 @@
 			%div{ :class => "row" }
 				%div{ :class => "col-md-4" }
 					%h3 Digital Design
-					%h5{ :class => "grey" }
+					%p{ :class => "grey" }
 						Digital design is my passion and I specialise in Branding Identities and Website Design. I design websites that are beautiful, easy-to-use and with great content architecture.
 				%div{ :class => "col-md-4" }
 					%h3 Photography
-					%h5{ :class => "grey" }
+					%p{ :class => "grey" }
 						I've been behind the lense since I was 12 years old - composing a great photo is an obsession that I can't get over. I love candid-style photos and shoot weddings, fashion and every day life.
 				%div{ :class => "col-md-4" }
 					%h3 Travel
-					%h5{ :class => "grey" }
+					%p{ :class => "grey" }
 						I'm working remotely for my current clients while I travel the world with a small backpack filled with my belongings.
 						%br You can read about my adventures on my Journal.
 
@@ -37,7 +37,7 @@
 						%div{ :class => "col-md-4" }
 							%h3{ :class => "white" }
 								%a{ :href => '/portfolios/'+portfolio.id.to_s }=portfolio.title
-							%h5{ :class => "grey" }=strip_tags(portfolio.content)
+							%p{ :class => "grey" }=strip_tags(portfolio.content)
 
 				%p{ :class => "left-aligned white" }
 					%br

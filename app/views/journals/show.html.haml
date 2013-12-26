@@ -6,11 +6,11 @@
 				%h2{ :class => "orange" }
 					= @journal.title
 
-				%h5{ :class => "italic" }
+				%p{ :class => "italic" }
 					= @journal.date
 
-				%h5{ :class => "grey" }
+				%p{ :class => "grey" }
 					=markdown(@journal.content).html_safe
 
-				%h5
+				%p
 					%a{ :href => "/blog/" } Back

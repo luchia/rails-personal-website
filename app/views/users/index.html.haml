@@ -10,14 +10,14 @@
               %thead
                 %tr
                   %th 
-                    %h5 Name
+                    %p Name
               %tbody
                 - @users.each do |user|
                   %tr
                     %td
-                      %h5=user.name
+                      %p=user.name
                   %tr
-                    %h5=link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
+                    %p=link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
 
             %br
-            %h5=link_to 'New User', new_user_path
+            %p=link_to 'New User', new_user_path
