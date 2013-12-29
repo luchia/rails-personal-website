@@ -6,9 +6,6 @@
 				%h2{ :class => "orange" }
 					= @portfolio.title
 
-				%p{ :class => "italic" }
-					= @portfolio.date
-
 				%p{ :class => "grey" }
 					=markdown(@portfolio.content).html_safe
 					

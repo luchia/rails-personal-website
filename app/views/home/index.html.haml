@@ -25,8 +25,8 @@
 				%div{ :class => "col-md-4" }
 					%h3 Travel
 					%p{ :class => "grey" }
-						I'm working remotely for my current clients while I travel the world with a small backpack filled with my belongings.
-						%br You can read about my adventures on my Journal.
+						I'm working remotely for my current clients while I travel the world with a small backpack filled with my belongings. I'm travelling South East Asia in 2014.
+						%br You can read about my adventures in my Journal.
 
 %div{ :id => "work" }
 	%div{ :class => "container" }
@@ -37,7 +37,7 @@
 						%div{ :class => "col-md-4" }
 							%h3{ :class => "white" }
 								%a{ :href => '/portfolios/'+portfolio.id.to_s }=portfolio.title
-							%p{ :class => "grey" }=truncate(strip_tags(portfolio.content), length: 100)
+							%p{ :class => "grey" }=truncate(strip_tags(portfolio.content), length: 150)
 
 				%p{ :class => "left-aligned white" }
 					%br

@@ -5,7 +5,7 @@ class JournalsController < ApplicationController
   # GET /journals
   # GET /journals.json
   def index
-    @journals = Journal.all
+    @journals = Journal.all( :order => "created_at DESC" )
     render :layout => 'adminlayout'
   end
 
