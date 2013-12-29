@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 	skip_before_action :authorize
 
   def index
-  	@portfolios = Portfolio.order("created_at desc").last(3)
+  	@portfolios = Portfolio.all( :order => "created_at DESC", :limit => 3 )
   end
 
 end
