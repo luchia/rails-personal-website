@@ -36,8 +36,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    disqus (1.0.4)
-      json
     erubis (2.7.0)
     execjs (2.0.2)
     haml (4.0.4)
@@ -121,7 +119,6 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby (~> 3.1.2)
   coffee-rails (~> 4.0.0)
-  disqus
   haml
   jbuilder (~> 1.2)
   jquery-rails
