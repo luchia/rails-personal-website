@@ -82,8 +82,7 @@ a:hover {
 }
 
 .nav li {
-	list-style: none;
-	display: inline;
+	display: inline-block;
 	padding-top: 15px;
 	padding-right: 30px;
 	color: #FFFFFF;
@@ -97,7 +96,23 @@ a:hover {
 
 .nav li a:hover, .nav li a:focus {
 	color: orange;
-	background-color: #000000;
+	background-color: transparent;
+}
+
+.mobi li {
+	display: block;
+	text-align: right;
+}
+
+.mobi li a {
+	color: #e7e7e7;
+	text-decoration: none;
+	display: inline;
+}
+
+.mobi li a:hover, .nav li a:focus {
+	color: orange;
+	background-color: transparent;
 }
 
 

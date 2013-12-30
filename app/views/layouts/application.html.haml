@@ -8,9 +8,22 @@
 	%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0"}
 
 %body
-	%div{ :id => "nav" }
+	%div{ :id => "nav", :class => "hidden-sm hidden-xs" }
 		%ul{ :class => "nav" }
+			%li.active
+				%a{ :href => "/" } Home
 			%li
+				%a{ :href => "/about" } About
+			%li
+				%a{ :href => "/work/" } Work
+			%li
+				%a{ :href => "/blog/" } Journal
+			%li
+				%a{ :href => "/contact" } Get in Touch
+
+	%div{ :id => "nav", :class => "visible-xs visible-sm" }
+		%ul{ :class => "mobi" }
+			%li.active
 				%a{ :href => "/" } Home
 			%li
 				%a{ :href => "/about" } About
