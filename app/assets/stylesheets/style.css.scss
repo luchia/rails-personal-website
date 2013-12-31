@@ -1,6 +1,7 @@
 /* Fontfaces */
 @import url(http://fonts.googleapis.com/css?family=Allerta);
 @import url(http://fonts.googleapis.com/css?family=Ruda);
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:700);
 
 /* Built in Elements */
 
@@ -22,8 +23,8 @@ section {
 h1 {
 	padding-top: 0;
 	color: #1c1c1c;
-	font-size: 2.5em;
-	font-family: 'Allerta', sans-serif;
+	font-size: 3em;
+	font-family: 'Merriweather Sans', sans-serif;
 }
 
 h2 {
@@ -242,7 +243,11 @@ a:hover {
 }
 
 .italic {
-	font-style: italic;
+	font-size: 2.5em;
+}
+
+.bigger {
+	font-size: 3.5em;
 }
 
 .glyphicon .glyphicon-arrow-down a {
