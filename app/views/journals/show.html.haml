@@ -6,10 +6,10 @@
 				%h2{ :class => "orange" }
 					= @journal.title
 
-				%p{ :class => "italic" }
+				%p
 					= @journal.date
 
-				%p{ :class => "grey" }
+				%p
 					=markdown(@journal.content).html_safe
 
 				%p
