@@ -22,7 +22,7 @@
           %p
             = journal.date
           %p{ :class => "grey" }
-            = truncate(strip_tags(journal.content))
+            = truncate(strip_tags(journal.content), length: 400)
           %br
           %br
           %br
