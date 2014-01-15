@@ -1,56 +1,58 @@
-%div{ :id => "home" }
+#home
 	%section
-		%div{ :class => "container" }
-			%div{ :class => "row"}
-				%div{ :class => "col-md-offset-4 col-md-8" }
-					%h1{ :class => "orange slogan" } 
+		.container
+			.row
+				.col-md-offset-4.col-md-8
+					%h1.orange.slogan
 						Hello,
 						I'm Luchia.
-					%p{ :class => "grey" } Scroll down to learn more.
+					%p.grey Scroll down to learn more.
 
-%div{ :id => "about" }
-	%div{ :class => "container" }
-		%div{ :id => "text-container" }
-			%h1{ :class => "white text-center italic" } 
-				I'm a designer who likes to develop too - yep, multi-talented.
+#about
+	.container
+		#text-container
+			%h1.white.text-center.italic
+				I design & develop beautiful websites that 
+				%br
+				drive traffic and increase my clients revenue.
 			%br
-			%div{ :class => "row" }
-				%div{ :class => "col-md-4" }
+			.row
+				.col-md-4
 					%h3 Digital Design
-					%p{ :class => "grey" }
+					%p.grey
 						Digital design is my passion and I specialise in Branding Identities and Website Design. I enjoy creating modern, timeless identities that will serve my clients without becoming out of fashion.
-				%div{ :class => "col-md-4" }
+				.col-md-4
 					%h3 Web Development
-					%p{ :class => "grey" }
+					%p.grey
 						I build clean, professional and responsive websites. I believe in designing mobile first and create beautiful websites with great content architecture. I'm working Ruby on Rails, HTML5 & CSS3 at the moment.
-				%div{ :class => "col-md-4" }
+				.col-md-4
 					%h3 Photography
-					%p{ :class => "grey" }
+					%p.grey
 						I've been behind the lense since I was 12 years old - composing a great photo is an obsession that I can't get over. I love candid-style photos and shoot weddings, fashion and every day life.
 
-%div{ :id => "work" }
-	%div{ :class => "container" }
-		%div{ :id => "text-container" }
+#work
+	.container
+		#text-container
 			%section
-				%div{ :class => "row" }
+				.row
 					-@portfolios.each do |portfolio|
-						%div{ :class => "col-md-4" }
-							%h3{ :class => "white" }
-								%a{ :href => '/portfolios/'+portfolio.id.to_s }=portfolio.title
-							%p{ :class => "grey" }=truncate(portfolio.content, length: 150)
+						.col-md-4
+							%h3.white
+								%a{ :href => '/portfolios/'+portfolio.id.to_s }=truncate(markdown(portfolio.content).html_safe, length: 20)
+							%p.grey=truncate(portfolio.content, length: 150)
 
-				%p{ :class => "left-aligned white" }
+				%p.left-aligned.white
 					%br
 					%br
 					%a{ :href => "/work/" }
 						See more
 
-%div{ :id => "contact" }
-	%div{ :class => "container" }
-		%div{ :class => "pushdown" }
+#contact
+	.container
+		.pushdown
 			%section
-				%h3{ :class => "text-center italic" }
-					%span{ :class => "brisbane" }
+				%h3.text-center.italic
+					%span.brisbane
 						Based in Brisbane, Australia.
 						%a{ :href => "/contact" } 
 							Interested?
