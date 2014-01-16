@@ -38,8 +38,7 @@
 					-@portfolios.each do |portfolio|
 						.col-md-4
 							%h3.white
-								%a{ :href => '/portfolios/'+portfolio.id.to_s }=truncate(markdown(portfolio.content).html_safe, length: 20)
-							%p.grey=truncate(portfolio.content, length: 150)
+								%a{ :href => '/portfolios/'+portfolio.id.to_s }=markdown(portfolio.content).html_safe
 
 				%p.left-aligned.white
 					%br
