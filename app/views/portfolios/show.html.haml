@@ -6,7 +6,7 @@
 				%h2{ :class => "orange" }
 					= @portfolio.title
 
-				= @portfolio.image
+				= image_tag @portfolio.image, :class => "img-responsive"
 
 				%p{ :class => "grey" }
 					=markdown(@portfolio.content).html_safe

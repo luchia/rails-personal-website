@@ -38,13 +38,12 @@
 					-@portfolios.each do |portfolio|
 						.col-md-4
 							%h3.white
-								%a{ :href => '/portfolios/'+portfolio.id.to_s }=image_tag portfolio.image
+								=link_to (image_tag portfolio.image, :class => "img-responsive"), portfolio
 
 				%p.left-aligned.white
 					%br
 					%br
-					%a{ :href => "/work/" }
-						See more
+					=link_to 'See more', '/work/'
 
 #contact
 	.container
