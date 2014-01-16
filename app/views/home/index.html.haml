@@ -38,7 +38,7 @@
 					-@portfolios.each do |portfolio|
 						.col-md-4
 							%h3.white
-								%a{ :href => '/portfolios/'+portfolio.id.to_s }=markdown(portfolio.content).html_safe
+								%a{ :href => '/portfolios/'+portfolio.id.to_s }=image_tag portfolio.image
 
 				%p.left-aligned.white
 					%br

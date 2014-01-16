@@ -6,6 +6,8 @@
 				%h2{ :class => "orange" }
 					= @portfolio.title
 
+				= @portfolio.image
+
 				%p{ :class => "grey" }
 					=markdown(@portfolio.content).html_safe
 					
