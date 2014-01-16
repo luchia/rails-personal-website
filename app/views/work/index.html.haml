@@ -1,32 +1,34 @@
-%div{ :id => "work-home" }
+#work-home
   %section
-    %div{ :class => "container" }
-      %div{ :class => "row"}
-        %div{ :class => "col-md-offset-4 col-md-8" }
-          %h1{ :class => "orange italic slogan" } 
+    .container
+      .row
+        .col-md-offset-4.col-md-8
+          %h1.orange.italic.slogan
             Discoveries
-          %p{ :class => "grey" } through Branding, Web Design & other Mediums
+          %p.grey through Branding, Web Design & other Mediums
 
-%div{ :id => "about" }
+#about
   %br
   %br
 
-%div{ :id => "work" }
-  %div{ :class => "container" }
-    %div{ :id => "text-container" }
-      %div{ :class => "row" }
+#work
+  .container
+    #text-container
+      %h3.grey
+        Click to see more
+      %br
+      .row
 
         - @portfolios.each do |portfolio|
-          %div{ :class => "col-md-4" }
+          .col-md-4
             =link_to (image_tag portfolio.image, :class => "img-responsive"), portfolio
             %br
 
-%div{ :id => "contact" }
-  %div{ :class => "container" }
-    %div{ :class => "pushdown" }
+#contact
+  .container
+    .pushdown
       %section
-        %h2{ :class => "text-center" }
-          %span{ :class => "brisbane" } 
+        %h2.text-center
+          %span.brisbane
             Like what you see? 
-            %a{ :href => "/contact" } 
-              Hire Me
+            =link_to 'Hire Me', '/contact'

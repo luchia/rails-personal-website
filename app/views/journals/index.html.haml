@@ -9,10 +9,15 @@
 
           - @journals.each do |journal|
             %h3
-              %a{ :href => '/journals/'+journal.id.to_s }=journal.title
+              =link_to journal.title, journal
 
-            %p{ :class=> "grey" }= journal.created_at.strftime("%d %b, %Y")
+            %p.grey= journal.created_at.strftime("%d %b, %Y")
+
             %p= journal.content
-            %p=link_to 'Edit', edit_journal_path(journal)
-            %p=link_to 'Delete', journal, method: :delete, data: { confirm: 'Are you sure?' }
+
+            %p.text-right
+              =link_to 'Edit', edit_journal_path(journal)
+              |
+              =link_to 'Delete', journal, method: :delete, data: { confirm: 'Are you sure?' }
             %br
+

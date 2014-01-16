@@ -1,23 +1,16 @@
-%div{ :id => "footer" }
+#footer
   %section
-    %div{ :class => "container" }
-      %div{ :id => "text-container" }
-        %div{ :class => "row" }
-          %div{ :class => "col-md-8 col-md-offset-2" }
-            %h2{ :class => "orange" } Listing Users
+    .container
+      #text-container
+        .row
+          .col-md-8.col-md-offset-2
+            %h2.orange Listing Users
+            %br
 
-            %table
-              %thead
-                %tr
-                  %th 
-                    %p Name
-              %tbody
-                - @users.each do |user|
-                  %tr
-                    %td
-                      %p=user.name
-                  %tr
-                    %p=link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
+            -@users.each do |user|
+              %p=user.name
+              %br
+              %p.text-right=link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
 
             %br
             %p=link_to 'New User', new_user_path

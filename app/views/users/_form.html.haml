@@ -1,6 +1,6 @@
 = form_for(@user) do |f|
   = if @user.errors.any?
-    %div{ :id => "error_explanation" }
+    #error_explanation
       %h2
         = pluralize(@user.errors.count, "error") 
         prohibited this portfolio from being saved:
@@ -9,21 +9,22 @@
       = @user.errors.full_messages.each do |msg|
         %li 
           = msg
+      %br
 
-  %div{ :class => "field" }
+  .field
     = f.label :name, 'Name:'
     %br
     = f.text_field :name, size: 40
 
-  %div{ :class => "field" }
+  .field
     = f.label :password, 'Password:'
     %br
     = f.password_field :password, size: 40
 
-  %div{ :class => "field" }
+  .field
     = f.label :password_confirmation, 'Confirm:'
     %br
     = f.password_field :password_confirmation, size: 40
 
-  %div{ :class => "actions" }
+  .actions
     = f.submit

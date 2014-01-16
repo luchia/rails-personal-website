@@ -1,13 +1,13 @@
-%div{ :id => "work" }
-	%div{ :class => "container" }
-		%div{ :id => "text-container" }
-			%div{ :class => "row" }
-				%div{ :class => "col-md-10 col-md-offset-1" }
-					%h2{ :class => "orange" } New Portfolio Entry
-					%div{ :class => "row" }
-						%div{ :class => "col-md-5" }
+#work
+	.container
+		#text-container
+			.row
+				.col-md-10.col-md-offset-1
+					%h2.orange New Portfolio Entry
+					.row
+						.col-md-5
 							= render 'form'
-						%div{ :class => "col-md-5" }
-							%div{ :id => "markup-area" }
+						.col-md-5
+							#markup-area
 
 					= link_to 'Back', portfolios_path

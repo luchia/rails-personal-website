@@ -1,27 +1,27 @@
-%div{ :id => "work-home" }
+#work-home
   %section
-    %div{ :class => "container" }
-      %div{ :class => "row"}
-        %div{ :class => "col-md-offset-4 col-md-8" }
-          %h1{ :class => "orange italic slogan" } 
+    .container
+      .row
+        .col-md-offset-4.col-md-8
+          %h1.orange.italic.slogan 
             Ramblings
-          %p{ :class => "grey" } about Design, Photography & Travel
+          %p.grey about Design, Photography & Travel
 
-%div{ :id => "about" }
+#about
   %br
   %br
 
-%div{ :id => "footer" }
-  %div{ :class => "container" }
-    %div{ :id => "text-container" }
-      %div{ :class => "col-md-offset-2 col-md-8" }
+#footer
+  .container
+    #text-container
+      .col-md-offset-2.col-md-8
         %br
         - @journals.each do |journal|
           %h3
-            %a{ :href => '/journals/'+journal.id.to_s }=journal.title
+            =link_to journal.title, journal
           %p
-            = journal.date
-          %p{ :class => "grey" }
+            = journal.created_at.strftime("%d %b, %Y")
+          %p.grey
             = truncate(strip_tags(journal.content), length: 400)
           %br
           %br

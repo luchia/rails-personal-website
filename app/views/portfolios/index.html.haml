@@ -9,7 +9,7 @@
 
           - @portfolios.each do |portfolio|
             %h3
-              %a{ :href => '/portfolios/'+portfolio.id.to_s }=portfolio.title
+              =link_to portfolio.title, portfolio
             %br
             
             %p.text-right

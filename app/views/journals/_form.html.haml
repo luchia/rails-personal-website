@@ -1,6 +1,6 @@
 = form_for(@journal) do |f|
   = if @journal.errors.any?
-    %div{ :id => "error_explanation" }
+    #error_explanation
       %h2
         = pluralize(@journal.errors.count, "error") 
         prohibited this journal from being saved:
@@ -10,24 +10,24 @@
         %li 
           = msg
 
-  %div{ :class => "field" }
+  .field
     = f.label :title
     %br 
     %br
     = f.text_field :title
 
-  %div{ :class => "field" }
+  .field
     = f.label :date
     %br
     %br
     = f.datetime_select :date
 
-  %div{ :class => "field" }
+  .field
     = f.label :content
     %br
     %br
     = f.text_area :content, rows: 10
     %br
 
-  %div{ :class => "actions" }
+  .actions
     = f.submit
