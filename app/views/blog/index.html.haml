@@ -22,7 +22,7 @@
           %p
             = journal.created_at.strftime("%d %b, %Y")
           %p.grey
-            = truncate(strip_tags(journal.content), length: 400)
+            = truncate(strip_tags(journal.content), length: 350)
           %br
           %br
           %br
