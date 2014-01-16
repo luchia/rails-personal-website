@@ -3,6 +3,7 @@ require 'test_helper'
 class PortfoliosControllerTest < ActionController::TestCase
   setup do
     @portfolio = portfolios(:one)
+
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class PortfoliosControllerTest < ActionController::TestCase
 
   test "should create portfolio" do
     assert_difference('Portfolio.count') do
-      post :create, portfolio: { content: @portfolio.content, date: @portfolio.date, title: @portfolio.title }
+      post :create, portfolio: { content: @portfolio.content, date: @portfolio.date, title: @portfolio.title, image: @portfolio.image }
     end
 
     assert_redirected_to portfolio_path(assigns(:portfolio))
@@ -35,7 +36,7 @@ class PortfoliosControllerTest < ActionController::TestCase
   end
 
   test "should update portfolio" do
-    patch :update, id: @portfolio, portfolio: { content: @portfolio.content, date: @portfolio.date, title: @portfolio.title }
+    patch :update, id: @portfolio, portfolio: { content: @portfolio.content, date: @portfolio.date, title: @portfolio.title, image: @portfolio.image }
     assert_redirected_to portfolio_path(assigns(:portfolio))
   end
 
