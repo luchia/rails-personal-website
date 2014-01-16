@@ -7,7 +7,7 @@
 					= @journal.title
 
 				%p
-					= @journal.date
+					= @journal.created_at.strftime("%d %b, %Y")
 
 				%p
 					=markdown(@journal.content).html_safe
