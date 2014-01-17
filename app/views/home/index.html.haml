@@ -38,7 +38,7 @@
 					-@portfolios.each do |portfolio|
 						.col-md-4
 							.thumbnails-img
-								=link_to markdown(portfolio.content).first(52).html_safe, portfolio
+								=link_to portfolio.title, portfolio
 
 
 				%p.left-aligned.white
