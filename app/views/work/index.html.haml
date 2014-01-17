@@ -20,9 +20,8 @@
       .row
 
         - @portfolios.each do |portfolio|
-          .col-md-4
-            %h3
-              =link_to portfolio.title, portfolio
+          .col-md-8.col-md-offset-2
+            =link_to markdown(portfolio.content).first(52).html_safe, portfolio
             %br
 
 #contact
