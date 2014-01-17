@@ -9,29 +9,65 @@
 
 %body
 	#nav.hidden-sm.hidden-xs
-		%ul.nav
-			%li.active
-				=link_to 'Home', '/'
-			%li
-				=link_to 'About', '/about/'
-			%li
-				=link_to 'Work', '/work/'
-			%li
-				=link_to 'Journal', '/blog'
-			%li
-				=link_to 'Get in Touch', '/contact'
+		%ul.nav.text-right
+			-if User.find_by_id(session[:user_id])
+				%li.active
+					=link_to 'Home', '/'
+				%li
+					=link_to 'About', '/about/'
+				%li
+					=link_to 'Work', '/portfolios/'
+				%li
+					=link_to 'Journal', '/journals/'
+				%li
+					=link_to 'Get in Touch', '/contact'
+				%li
+					|
+				%li
+					=link_to 'Users', '/users'
+				%li
+					=link_to 'Log Out', logout_path, method: :delete
+			-else
+				%li.active
+					=link_to 'Home', '/'
+				%li
+					=link_to 'About', '/about/'
+				%li
+					=link_to 'Work', '/portfolios/'
+				%li
+					=link_to 'Journal', '/journals/'
+				%li
+					=link_to 'Get in Touch', '/contact'
 
 	#nav.visible-xs.visible-sm
 		%ul.mobi
-			%li.active
-				=link_to 'Home', '/'
-			%li
-				=link_to 'About', '/about/'
-			%li
-				=link_to 'Work', '/work/'
-			%li
-				=link_to 'Journal', '/blog'
-			%li
-				=link_to 'Get in Touch', '/contact'
+			-if User.find_by_id(session[:user_id])
+				%li.active
+					=link_to 'Home', '/'
+				%li
+					=link_to 'About', '/about/'
+				%li
+					=link_to 'Work', '/portfolios/'
+				%li
+					=link_to 'Journal', '/journals/'
+				%li
+					=link_to 'Get in Touch', '/contact'
+				%li
+					|
+				%li
+					=link_to 'Users', '/users'
+				%li
+					=link_to 'Log Out', logout_path, method: :delete
+			-else
+				%li.active
+					=link_to 'Home', '/'
+				%li
+					=link_to 'About', '/about/'
+				%li
+					=link_to 'Work', '/portfolios/'
+				%li
+					=link_to 'Journal', '/journals/'
+				%li
+					=link_to 'Get in Touch', '/contact'
 
-	= yield
+	= yield			

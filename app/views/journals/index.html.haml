@@ -4,8 +4,10 @@
       .row
         .col-md-8.col-md-offset-2
           %h2.orange Journal
-          %p.left-aligned=link_to 'New Entry', new_journal_path
-          %br
+          -if User.find_by_id(session[:user_id])
+            %p.left-aligned=link_to 'New Entry', new_journal_path
+          -else
+            %br
 
           - @journals.each do |journal|
             %h3
@@ -16,8 +18,10 @@
             %p= journal.content
 
             %p.text-right
-              =link_to 'Edit', edit_journal_path(journal)
-              |
-              =link_to 'Delete', journal, method: :delete, data: { confirm: 'Are you sure?' }
-            %br
+              -if User.find_by_id(session[:user_id])
+                =link_to 'Edit', edit_journal_path(journal)
+                |
+                =link_to 'Delete', journal, method: :delete, data: { confirm: 'Are you sure?' }
+              -else
+                %br
 
