@@ -17,12 +17,13 @@
       %h3.grey
         Click to see more
       %br
-      .row
 
-        - @portfolios.each do |portfolio|
+      - @portfolios.each do |portfolio|
+        .row
           .col-md-8.col-md-offset-2
-            =link_to markdown(portfolio.content).first(52).html_safe, portfolio
-            %br
+
+          =link_to markdown(portfolio.content).first(55).html_safe, portfolio
+          %br
 
 #contact
   .container
