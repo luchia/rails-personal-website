@@ -21,7 +21,7 @@
 
         - @portfolios.each do |portfolio|
           .col-md-4
-            =link_to (image_tag portfolio.image, :class => "img-responsive"), portfolio
+            =link_to markdown(portfolio.content).first(52).html_safe, portfolio
             %br
 
 #contact

@@ -36,15 +36,23 @@ gem 'jbuilder', '~> 1.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  gem 'sdoc', :require => false
 end
 
 gem 'haml'
+
+gem 'truncate_html'
+
+gem "nokogiri"
+
+gem "htmlentities"
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem 'redcarpet'
+
+gem 'albino'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -54,5 +62,3 @@ gem 'redcarpet'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-ruby '2.0.0'

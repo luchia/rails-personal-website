@@ -37,8 +37,9 @@
 				.row
 					-@portfolios.each do |portfolio|
 						.col-md-4
-							%h3.white
-								=link_to (image_tag portfolio.image, :class => "img-responsive"), portfolio
+							.img-responsive
+								=link_to markdown(portfolio.content).first(52).html_safe, portfolio
+
 
 				%p.left-aligned.white
 					%br
