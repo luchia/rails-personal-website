@@ -18,11 +18,10 @@
         Click to see more
       %br
 
-      - @portfolios.each do |portfolio|
-        .row
+      .row
+        - @portfolios.each do |portfolio|
           .col-md-8.col-md-offset-2
-
-          =link_to markdown(portfolio.content).first(55).html_safe, portfolio
+            =link_to markdown(portfolio.content).first(55).html_safe, portfolio
           %br
 
 #contact
