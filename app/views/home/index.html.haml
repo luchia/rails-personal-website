@@ -37,7 +37,7 @@
 				.row
 					-@portfolios.each do |portfolio|
 						.col-md-4
-							.img-responsive
+							.thumbnails
 								=link_to markdown(portfolio.content).first(52).html_safe, portfolio
 
 
