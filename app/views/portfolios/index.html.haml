@@ -10,8 +10,7 @@
             %br
 
           - @portfolios.each do |portfolio|
-            %h3
-              =link_to portfolio.title, portfolio
+            =link_to markdown(portfolio.content).first(153).html_safe, portfolio
             %br
             
             %p.text-right
@@ -21,3 +20,13 @@
                 =link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' }
               -else 
                 %br
+
+
+#contact
+  .container
+    .pushdown
+      %section
+        %h3.text-center.italic
+          %span.brisbane
+            Like what you see?
+            =link_to 'Hire Me', '/contact'
