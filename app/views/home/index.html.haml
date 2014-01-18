@@ -35,9 +35,9 @@
 		#text-container
 			%section
 				.row
-					-@portfolios.each do |portfolio|
-						.col-md-8.col-md-offset-2
-							=link_to markdown(portfolio.content).first(135).html_safe, portfolio
+					.col-md-8.col-md-offset-2
+						-@portfolios.each do |portfolio|
+							=link_to markdown(portfolio.content).first(70).html_safe, portfolio
 							%br
 
 
