@@ -8,9 +8,9 @@
             %p.left-aligned=link_to 'New Entry', new_portfolio_path
           -else
             %br
-            
+
           -@portfolios.each do |portfolio|
-            =link_to markdown(portfolio.content).first(70).html_safe, portfolio
+            =link_to markdown(portfolio.content).first(72).html_safe, portfolio
             %br
             
             %p.text-right
