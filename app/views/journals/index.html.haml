@@ -4,6 +4,7 @@
       .row
         .col-md-8.col-md-offset-2
           %h2.grey Journal
+          %p Things that happen to me, that I want to share with you.
           -if User.find_by_id(session[:user_id])
             %p.left-aligned=link_to 'New Entry', new_journal_path
           -else

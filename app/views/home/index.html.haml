@@ -4,31 +4,30 @@
 			.row
 				.col-md-offset-4.col-md-8
 					%h1.orange.slogan
-						Hello,
-						I'm Luchia.
+						Hello, I'm Luchia.
 					%p.grey Scroll down to learn more.
 
 #about
 	.container
 		#text-container
 			%h1.white.text-center.italic
-				I design & develop beautiful websites that 
+				I focus on generating more revenue for your business, 
 				%br
-				drive traffic and increase my clients revenue.
+				so that you get a big return on your investment.
 			%br
 			.row
 				.col-md-4
 					%h3 Digital Design
 					%p.grey
-						Digital design is my passion and I specialise in Branding Identities and Website Design. I enjoy creating modern, timeless identities that will serve my clients without becoming out of fashion.
+						Digital design is my passion and I specialise in Branding Identities and Website Design. I create timeless pieces that drive traffic, increase brand recognition and word-of-mouth referrals for my clients.
 				.col-md-4
 					%h3 Web Development
 					%p.grey
-						I build clean, professional and responsive websites. I believe in designing mobile first and create beautiful websites with great content architecture. I'm working Ruby on Rails, HTML5 & CSS3 at the moment.
+						I develop mobile-friendly websites that allow my client's users to purchase anywhere, at any time. I design with the intention to specifically illict a response (eg. purchasing my client's products) from viewers.
 				.col-md-4
 					%h3 Photography
 					%p.grey
-						I've been behind the lense since I was 12 years old - composing a great photo is an obsession that I can't get over. I love candid-style photos and shoot weddings, fashion and every day life.
+						I specialise in candid-style photos with natural lighting that capture the atmosphere and professionalism of my client's businesses. All photos are high-resolution and suitable for print and digital campaigns.
 
 #work
 	.container
@@ -36,6 +35,7 @@
 			%section
 				.row
 					.col-md-8.col-md-offset-2
+						%h2.grey My Recent Work
 						-@portfolios.each do |portfolio|
 							=link_to markdown(portfolio.content).first(72).html_safe, portfolio
 							%br
@@ -52,5 +52,5 @@
 			%section
 				%h3.text-center.italic
 					%span.brisbane
-						Based in Brisbane, Australia.
-						=link_to 'Interested?', '/contact'
+						Let's make your business shine.
+						=link_to 'Contact Me', '/contact'

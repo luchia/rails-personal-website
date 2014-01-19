@@ -4,6 +4,7 @@
       .row
         .col-md-8.col-md-offset-2
           %h2.grey Portfolio
+          %p Click the images to see how my client's businesses grew with my help.
           -if User.find_by_id(session[:user_id])
             %p.left-aligned=link_to 'New Entry', new_portfolio_path
           -else
@@ -28,5 +29,5 @@
       %section
         %h3.text-center.italic
           %span.brisbane
-            Like what you see?
+            I can help you grow - 
             =link_to 'Hire Me', '/contact'
