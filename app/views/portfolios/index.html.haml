@@ -6,10 +6,12 @@
           %h2.grey Portfolio
           %p Click the images to see how my client's businesses grew with my help.
           -if User.find_by_id(session[:user_id])
-            %p.left-aligned=link_to 'New Entry', new_portfolio_path
+            %p.left-aligned
+              =link_to 'New Entry', new_portfolio_path
+              =will_paginate
           -else
             %br
-          =will_paginate
+
           -@portfolios.each do |portfolio|
             =link_to markdown(portfolio.content).first(72).html_safe, portfolio
             %br
