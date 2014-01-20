@@ -16,7 +16,7 @@
 
             %p.grey= journal.created_at.strftime("%d %b, %Y")
 
-            %p= truncate(journal.content, length: 100)
+            %p= truncate(journal.content, length: 250)
 
             %p.text-right
               -if User.find_by_id(session[:user_id])
