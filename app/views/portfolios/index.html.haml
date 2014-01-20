@@ -10,7 +10,7 @@
               =link_to 'New Entry', new_portfolio_path
           -else
             %br
-          %p.left-aligned=will_paginate
+          %p=will_paginate
 
           -@portfolios.each do |portfolio|
             =link_to markdown(portfolio.content).first(72).html_safe, portfolio
@@ -23,6 +23,8 @@
                 =link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' }
               -else 
                 %br
+
+          %p=will_paginate
 
 
 #contact
