@@ -1,7 +1,7 @@
 !!!
 %html
 %head
-	%title Luchia Bloomfield
+	%title=yield(:title)
 	= stylesheet_link_tag "application", controller.controller_name
 	= javascript_include_tag "application", controller.controller_name
 	= csrf_meta_tags
