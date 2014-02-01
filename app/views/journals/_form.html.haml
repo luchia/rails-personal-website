@@ -11,19 +11,13 @@
           = msg
 
   .field
-    = f.label :title
+    = f.label :title, :class => "grey"
     %br 
     %br
     = f.text_field :title
 
   .field
-    = f.label :date
-    %br
-    %br
-    = f.datetime_select :date
-
-  .field
-    = f.label :content
+    = f.label :content, :class => "grey"
     %br
     %br
     = f.text_area :content, rows: 10
