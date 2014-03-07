@@ -3,6 +3,8 @@
 @import url(http://fonts.googleapis.com/css?family=Ruda);
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:700);
 
+
+
 /* Built in Elements */
 
 body {
@@ -19,6 +21,9 @@ html, body {
 section {
   margin: 0 auto;
 }
+
+
+/* Text Elements */
 
 h1 {
 	color: #1c1c1c;
@@ -75,9 +80,50 @@ a:hover {
 	text-decoration: none;
 }
 
-.thumbnails-img {
-	max-width:25%;
+.slogan {
+	padding-top: 45%;
+};
+
+.about {
+	padding-top: 25%
 }
+
+.brisbane {
+	background-color: orange;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #2c2c2c;
+}
+
+.orange {
+	color: orange;
+}
+
+.left-aligned {
+	float: right;
+}
+
+.white {
+	color: #e7e7e7;
+}
+
+.grey {
+	color: #656565;
+}
+
+.italic {
+	font-size: 2.5em;
+}
+
+.bigger {
+	font-size: 3.5em;
+}
+
+.pushdown {
+	padding-top: 15%;
+}
+
+
 
 /* Navigation Elements */
 
@@ -130,10 +176,12 @@ a:hover {
 /* Container Elements */
 
 #home {
-	height: 620px;
-	background-image: image-url('bg.jpg');
+	min-height: 100%;
+	min-width: 100%;
+	width: 100%;
+	height: auto;
+	background-image: url(image_path('bg.jpg'));
 	background-color: #000000;
-	background-position: fixed;
 	display: block;
 	top: 0;
 	left: 0;
@@ -143,13 +191,13 @@ a:hover {
     position: relative;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-width: 100%;
-    max-width: 100%;
-  	min-height: 100%;
 }
 
 #work-home {
-	height: 620px;
+	min-height: 100%;
+	min-width: 100%;
+	width: 100%;
+	height: auto;
 	background-image: url(image_path('bg3.jpg'));
 	background-color: #000000;
 	background-position: fixed;
@@ -163,23 +211,6 @@ a:hover {
     position: relative;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-#about-home {
-	background-image: url(image_path('bg2.jpg'));
-	background-color: #000000;
-	background-position: fixed;
-	display: block;
-	top: 0;
-	left: 0;
-	z-index: 0;
-	margin: 0 auto;
-    position: relative;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-width: 100%;
-    max-width: 100%;
-  	min-height: 100%;
 }
 
 #contact {
@@ -223,64 +254,7 @@ a:hover {
 	padding-bottom: 10px;
 }
 
-/* Text Elements */
 
-.slogan {
-	padding-top: 45%;
-};
-
-.about {
-	padding-top: 25%
-}
-
-.brisbane {
-	background-color: orange;
-	padding-left: 10px;
-	padding-right: 10px;
-	color: #2c2c2c;
-}
-
-.orange {
-	color: orange;
-}
-
-.left-aligned {
-	float: right;
-}
-
-.white {
-	color: #e7e7e7;
-}
-
-.grey {
-	color: #656565;
-}
-
-.italic {
-	font-size: 2.5em;
-}
-
-.bigger {
-	font-size: 3.5em;
-}
-
-.glyphicon .glyphicon-arrow-down a {
-	margin: 0 auto;
-	font-size: 3em;
-	color: orange;
-	text-decoration: none;
-}
-
-.glyphicon .glyphicon-arrow-down a:hover {
-	margin: 0 auto;
-	font-size: 3em;
-	color: orange;
-	text-decoration: none;
-}
-
-.pushdown {
-	padding-top: 15%;
-}
 
 /* Image Elements */
 
@@ -293,6 +267,12 @@ a:hover {
     margin-left: auto;
     margin-right: auto 
 }
+
+.thumbnails-img {
+	max-width:25%;
+}
+
+
 
 /* Fields */
 
@@ -325,15 +305,4 @@ textarea {
 	color: #656565;
 	background: #e7e7e7;
 	border: 1px solid #444444;
-}
-
-
-/* Mark Up Area */
-
-#markup-area {
-	max-height: 100%;
-}
-
-.pagination {
-	text-align: center;
 }
