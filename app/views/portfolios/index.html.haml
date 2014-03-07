@@ -4,8 +4,7 @@
     #text-container
       .row
         .col-md-8.col-md-offset-2
-          %h2.grey Portfolio
-          %p Click the images to see how my client's businesses grew with my help.
+          %h2.grey.pushdown Portfolio
           -if User.find_by_id(session[:user_id])
             %p.left-aligned
               =link_to 'New Entry', new_portfolio_path
@@ -34,5 +33,7 @@
       %section
         %h3.text-center.italic
           %span.brisbane
-            I can help you grow - 
-            =link_to 'hire me.', '/contact'
+            I will create a standout digital solution for your business.
+        %h2.text-center.italic
+          %span.brisbane
+            =link_to 'Hire me.', '/contact'
