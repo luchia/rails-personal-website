@@ -21,15 +21,15 @@ section {
 }
 
 h1 {
-	padding-top: 0;
 	color: #1c1c1c;
-	font-size: 3em;
+	font-size: 3.5em;
 	font-family: 'Merriweather Sans', sans-serif;
 }
 
 h2 {
 	color: #e7e7e7;
-	font-family: 'Allerta', sans-serif;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-size: 2em;
 }
 
 h3 {
@@ -46,7 +46,8 @@ p {
 	color: #656565;
 	line-height: 2em;
 	font-family: 'Ruda', sans-serif;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.9px;
+	font-size: 1em;
 }
 
 li {
@@ -57,7 +58,6 @@ li {
 }
 
 a {
-	font-family: 'Ruda', sans-serif;
 	background-color: transparent;
 	color: #656565;
 }
