@@ -8,67 +8,45 @@
 	%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0"}
 
 %body
-	#nav.hidden-sm.hidden-xs
-		%ul.nav.text-right
-			-if User.find_by_id(session[:user_id])
-				%li.active
-					=link_to 'Home', '/'
-				%li
-					=link_to 'About', '/about/'
-				%li
-					=link_to 'Work', '/portfolios/'
-				%li
-					=link_to 'Journal', '/journals/'
-				%li
-					=link_to 'Get in Touch', '/contact'
-				%li
-					|
-				%li
-					=link_to 'Users', '/users'
-				%li
-					=link_to 'Log Out', logout_path, method: :delete
-			-else
-				%li.active
-					=link_to 'Home', '/'
-				%li
-					=link_to 'About', '/about/'
-				%li
-					=link_to 'Work', '/portfolios/'
-				%li
-					=link_to 'Journal', '/journals/'
-				%li
-					=link_to 'Get in Touch', '/contact'
+	.navbar.navbar-defualt.navbar-fixed-top
+		.container
+			.navbar-header
+				%button{ :type => "button", :class => "navbar-toggle", "data-toggle" => "collapse", "data-target" => "navbar-collapse" }
+					%span.sr-only Toggle navigation
+					%span.icon-bar
+					%span.icon-bar
+					%span.icon-bar
+			.navbar-collapse.collapse
+				%ul.nav.navbar-nav.navbar-right
+					-if User.find_by_id(session[:user_id])
+						%li
+							=link_to 'Home', '/'
+						%li
+							=link_to 'About', '/about/'
+						%li
+							=link_to 'Work', '/portfolios/'
+						%li
+							=link_to 'Journal', '/journals/'
+						%li
+							=link_to 'Get in Touch', '/contact/'
+						%li
+							|
+						%li
+							=link_to 'Users', '/users'
+						%li
+							=link_to 'Log Out', logout_path, method: :delete
 
-	#nav.visible-xs.visible-sm
-		%ul.mobi
-			-if User.find_by_id(session[:user_id])
-				%li.active
-					=link_to 'Home', '/'
-				%li
-					=link_to 'About', '/about/'
-				%li
-					=link_to 'Work', '/portfolios/'
-				%li
-					=link_to 'Journal', '/journals/'
-				%li
-					=link_to 'Get in Touch', '/contact'
-				%li
-					|
-				%li
-					=link_to 'Users', '/users'
-				%li
-					=link_to 'Log Out', logout_path, method: :delete
-			-else
-				%li.active
-					=link_to 'Home', '/'
-				%li
-					=link_to 'About', '/about/'
-				%li
-					=link_to 'Work', '/portfolios/'
-				%li
-					=link_to 'Journal', '/journals/'
-				%li
-					=link_to 'Get in Touch', '/contact'
+					-else
+						%li
+							=link_to 'Home', '/'
+						%li
+							=link_to 'About', '/about/'
+						%li
+							=link_to 'Work', '/portfolios/'
+						%li
+							=link_to 'Journal', '/journals/'
+						%li
+							=link_to 'Get in Touch', '/contact'
 
 	= yield
 
