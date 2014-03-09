@@ -10,6 +10,8 @@
           -else
             %br
 
+          %p=will_paginate
+
           - @journals.each do |journal|
             %h3
               =link_to journal.title, journal
@@ -25,4 +27,6 @@
                 =link_to 'Delete', journal, method: :delete, data: { confirm: 'Are you sure?' }
               -else
                 %br
+
+          %p=will_paginate
 
