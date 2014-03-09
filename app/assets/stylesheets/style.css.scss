@@ -150,20 +150,8 @@ a:hover {
 	background-color: transparent;
 }
 
-.mobi li {
-	display: block;
-	text-align: right;
-}
-
-.mobi li a {
-	color: #e7e7e7;
-	text-decoration: none;
-	display: inline;
-}
-
-.mobi li a:hover, .nav li a:focus {
-	color: orange;
-	background-color: transparent;
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #E3e3e3 !important;
 }
 
 
