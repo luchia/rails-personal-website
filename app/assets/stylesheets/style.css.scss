@@ -143,9 +143,11 @@ a:hover {
 	color: #e7e7e7;
 	text-decoration: none;
 	display: inline;
+	text-shadow: none !important;
 }
 
-.nav li a:hover, .nav li a:focus {
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
 	color: orange;
 	background-color: transparent;
 }

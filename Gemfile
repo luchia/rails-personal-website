@@ -58,8 +58,6 @@ gem 'albino'
 
 gem "twitter-bootstrap-rails"
 
-gem "therubyracer"
-
 # Use unicorn as the app server
 # gem 'unicorn'
 
