@@ -8,14 +8,15 @@
 	%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0"}
 
 %body
-	.navbar.navbar-fluid-top
+	.navbar.navbar-fluid-top.navbar-fixed-top
 		.navbar-inner
-			.container-fluid
-				%a{ :class => "btn btn-navbar", "data-toggle" => "collapse", "data-target" => "navbar-collapse" }
+			.container
+				%a{ :class => "btn btn-navbar", "data-toggle" => "collapse", "data-target" => ".navbar-collapse" }
+					%span{ :class=> "sr-only" } Toggle Navigation
 					%span.icon-bar
 					%span.icon-bar
 					%span.icon-bar
-			.container-fluid.nav-collapse
+			.container.nav-collapse
 				%ul.nav.navbar-nav.navbar-right
 					-if User.find_by_id(session[:user_id])
 						%li
