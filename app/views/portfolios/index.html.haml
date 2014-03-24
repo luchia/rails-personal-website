@@ -2,28 +2,29 @@
 #work.img-responsive
   .container
     #text-container
-      %h2.grey.pushdown Portfolio
-      -if User.find_by_id(session[:user_id])
-        %p.left-aligned
-          =link_to 'New Entry', new_portfolio_path
-      -else
-        %br
-      %p=will_paginate
+      .row
+        .col-md-8.col-md-offset-2
+          %h2.grey.pushdown Portfolio
+          -if User.find_by_id(session[:user_id])
+            %p.left-aligned
+              =link_to 'New Entry', new_portfolio_path
+          -else
+            %br
+          %p=will_paginate
 
-      -@portfolios.each do |portfolio|
-        .col-md-4
-          =link_to markdown(portfolio.content).first(72).html_safe, portfolio
-          %br
-      
-          %p.text-right
-            -if User.find_by_id(session[:user_id])
-              =link_to 'Edit', edit_portfolio_path(portfolio)
-              |
-              =link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' }
-            -else 
-              %br
+          -@portfolios.each do |portfolio|
+            =link_to markdown(portfolio.content).first(72).html_safe, portfolio
+            %br
+            
+            %p.text-right
+              -if User.find_by_id(session[:user_id])
+                =link_to 'Edit', edit_portfolio_path(portfolio)
+                |
+                =link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' }
+              -else 
+                %br
 
-      %p=will_paginate
+          %p=will_paginate
 
 
 #contact
