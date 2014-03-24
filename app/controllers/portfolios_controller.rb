@@ -5,7 +5,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios
   # GET /portfolios.json
   def index
-    @portfolios = Portfolio.paginate(:page => params[:page], :per_page => 5, :order => 'created_at DESC')
+    @portfolios = Portfolio.paginate(:page => params[:page], :per_page => 15, :order => 'created_at DESC')
   end
 
   # GET /portfolios/1
