@@ -1,7 +1,10 @@
 Luchia::Application.routes.draw do
+  resources :tags
+
   get 'admin' => 'admin#index'
   get 'contact' => 'contact#index'
   get 'about' => 'about#index'
+  get 'categories' => 'tags#index'
   get 'portfolios' => 'portfolios#index'
   get 'journals' => 'journals#index'
   get 'users' => 'users#index'

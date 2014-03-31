@@ -1,0 +1,20 @@
+= form_for(@tag) do |f|
+  = if @tag.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@tag.errors.count, "error") 
+        prohibited this tag from being saved:
+
+      %ul
+      = @tag.errors.full_messages.each do |msg|
+        %li 
+          = msg
+      %br
+
+  .field
+    = f.label :tag, :class => "grey"
+    %br
+    = f.text_field :tag, rows: 10
+
+  .actions
+    = f.submit
