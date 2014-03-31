@@ -6,12 +6,12 @@ class TagsController < ApplicationController
   # GET /tags.json
   def index
     @tags = Tag.all
-    @portfolios = Portfolio.paginate(:page => params[:page], :per_page => 5, :order => 'created_at DESC')
   end
 
   # GET /tags/1
   # GET /tags/1.json
   def show
+    @portfolios = Portfolio.all
   end
 
   # GET /tags/new
