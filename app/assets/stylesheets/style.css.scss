@@ -63,7 +63,7 @@ li {
 }
 
 a {
-	background-color: transparent;
+	background-color: transparent !important;
 	color: #656565;
 }
 
@@ -75,7 +75,7 @@ a:focus, a:visited {
 }
 
 a:hover {
-	color: #444444;
+	color: orange !important;
 	background-color: transparent;
 	text-decoration: none;
 }
@@ -129,7 +129,6 @@ a:hover {
 
 .navbar {
 	background-color: #000000;
-	min-width: 100%;
 	max-width: 100%;
 }
 
@@ -138,20 +137,16 @@ a:hover {
 	padding-right: 30px;
 	background-color: #000000 !important;
 	border: none;
-	background-image: none;
 }
 
 .nav li {
-	display: inline-block;
 	padding-top: 15px;
 	color: #FFFFFF;
 	padding-left: 15px;
 }
 
 .nav li a {
-	color: #e7e7e7;
 	text-decoration: none;
-	display: inline;
 	text-shadow: none !important;
 }
 
@@ -161,8 +156,14 @@ a:hover {
 	background-color: transparent;
 }
 
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #E3e3e3 !important;
+.nav-collapse .nav > li > a {
+	font-weight: normal !important;
+}
+
+@media screen and (max-width: 480px) {
+   .nav > li > a {
+    display: block !important;
+   }
 }
 
 
@@ -298,4 +299,13 @@ textarea {
 	color: #656565;
 	background: #e7e7e7;
 	border: 1px solid #444444;
+}
+
+
+.btn .btn-navbar {
+	background-color: transparent;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: orange;
 }
