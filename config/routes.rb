@@ -4,8 +4,7 @@ Luchia::Application.routes.draw do
   get 'admin' => 'admin#index'
   get 'contact' => 'contact#index'
   get 'about' => 'about#index'
-  get 'categories' => 'tags#index'
-  get 'portfolios' => 'portfolios#index'
+  get 'portfolio' => 'portfolios#index'
   get 'journals' => 'journals#index'
   get 'users' => 'users#index'
 
