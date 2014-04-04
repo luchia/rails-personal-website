@@ -1,5 +1,5 @@
 /* Fontfaces */
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
 @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:700);
 
 
@@ -53,8 +53,8 @@ p {
 	color: #656565;
 	line-height: 2em;
 	font-family: 'Roboto', sans-serif;
-	letter-spacing: 0.9px;
-	font-size: 1em;
+	letter-spacing: 1.5px;
+	font-size: 1.2em;
 }
 
 li {
@@ -83,7 +83,7 @@ a:hover {
 }
 
 .slogan {
-	padding-top: 45%;
+	padding-top: 4%;
 }
 
 .catchphrase {
@@ -93,7 +93,7 @@ a:hover {
 }
 
 .about {
-	padding-top: 25%
+	padding-top: 15%
 }
 
 .brisbane {
