@@ -1,7 +1,6 @@
 /* Fontfaces */
-@import url(http://fonts.googleapis.com/css?family=Allerta);
-@import url(http://fonts.googleapis.com/css?family=Ruda);
-@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:700);
 
 
 
@@ -28,18 +27,21 @@ section {
 h1 {
 	color: #1c1c1c;
 	font-size: 3.5em;
-	font-family: 'Merriweather Sans', sans-serif;
+	font-family: 'Alegreya Sans', sans-serif;
+	letter-spacing: 3px;
 }
 
 h2 {
 	color: #e7e7e7;
-	font-family: 'Merriweather Sans', sans-serif;
+	font-family: 'Alegreya Sans', sans-serif;
 	font-size: 2em;
+	line-height:1.5em;
+	letter-spacing: 1.5px;
 }
 
 h3 {
 	color: orange;
-	font-family: 'Allerta', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.5em;
 }
 
@@ -50,7 +52,7 @@ h4 {
 p {
 	color: #656565;
 	line-height: 2em;
-	font-family: 'Ruda', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	letter-spacing: 0.9px;
 	font-size: 1em;
 }
@@ -58,7 +60,7 @@ p {
 li {
 	color: #656565;
 	line-height: 2em;
-	font-family: 'Ruda', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	letter-spacing: 0.5px;
 }
 
@@ -87,6 +89,7 @@ a:hover {
 .catchphrase {
 	font-family: 'Ruda', sans-serif;
 	letter-spacing: 1px;
+	font-size:2em;
 }
 
 .about {
@@ -158,6 +161,7 @@ a:hover {
 .nav li a {
 	text-decoration: none;
 	text-shadow: none !important;
+	text-transform: uppercase;
 }
 
 
