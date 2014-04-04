@@ -4,25 +4,19 @@
     #text-container
       .row
         .col-md-8.col-md-offset-2
-          %br
-          %h2.grey.pushdown Categories
 
           -if User.find_by_id(session[:user_id])
-            %p.left-aligned
+            %p.left-aligned.pushdown
               =link_to 'New Entry', new_tag_path
           -else
-            %br
+             
 
-          %br
-          %br
           -@tags.each do |tag|
-            .col-md-4
-              %h3
+            %ul.tags.pushdown
+              %li.categories
                 =link_to tag.tag, tag
 
-              %br
-              %br
-            
+              
               %p.text-right
                 -if User.find_by_id(session[:user_id])
                   =link_to 'Edit', edit_tag_path(tag)

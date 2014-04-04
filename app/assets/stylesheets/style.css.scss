@@ -83,7 +83,7 @@ a:hover {
 }
 
 .slogan {
-	padding-top: 4%;
+	padding-top: 45%;
 }
 
 .catchphrase {
@@ -322,4 +322,23 @@ textarea {
 
 .navbar-toggle .icon-bar {
 	background-color: orange;
+}
+
+
+/**** Categories styling *****/
+
+
+ul.tags {
+	float: left;
+	display: inline !important;
+}
+
+li.categories {
+	list-style-type: none !important;
+	display: inline;
+
+	a {
+		font-family: 'Alegreya Sans', sans-serif;
+		font-size: 2em !important;
+	}
 }
