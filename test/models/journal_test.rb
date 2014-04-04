@@ -10,4 +10,10 @@ class JournalTest < ActiveSupport::TestCase
 		assert journal.errors[:content].any?
 	end
 
+	test "journal is not valid without a unique title" do
+		journal = Journal.new(title: journals(:ruby).title, content: "yyy")
+		assert journal.invalid?
+		assert_equal ["has already been taken"], journal.errors[:title]
+	end
+
 end

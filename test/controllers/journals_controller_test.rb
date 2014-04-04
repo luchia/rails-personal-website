@@ -3,6 +3,7 @@ require 'test_helper'
 class JournalsControllerTest < ActionController::TestCase
   setup do
     @journal = journals(:one)
+    @update = { title: 'Something', content: 'Entry' }
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class JournalsControllerTest < ActionController::TestCase
 
   test "should create journal" do
     assert_difference('Journal.count') do
-      post :create, journal: { content: @journal.content, date: @journal.date, title: @journal.title }
+      post :create, journal: @update
     end
 
     assert_redirected_to journal_path(assigns(:journal))
@@ -35,7 +36,7 @@ class JournalsControllerTest < ActionController::TestCase
   end
 
   test "should update journal" do
-    patch :update, id: @journal, journal: { content: @journal.content, date: @journal.date, title: @journal.title }
+    patch :update, id: @journal, journal: @update
     assert_redirected_to journal_path(assigns(:journal))
   end
 
