@@ -127,9 +127,14 @@ a:hover {
 
 /* Navigation Elements */
 
+#navigation {
+	background-color: #000000;
+}
+
 .navbar {
 	background-color: #000000;
 	max-width: 100%;
+	position: fixed;
 }
 
 .navbar-inner {
