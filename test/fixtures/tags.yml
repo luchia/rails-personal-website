@@ -1,7 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  tag: Testone
+  tag: one
 
 two:
-  tag: MyString
+  tag: one
+
+ruby:
+  tag: hello
