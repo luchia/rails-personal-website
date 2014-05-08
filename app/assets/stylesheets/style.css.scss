@@ -101,7 +101,13 @@ a:hover {
 	padding-left: 10px;
 	padding-right: 10px;
 	color: #2c2c2c;
+
+	a:hover {
+		color: #2c2c2c !important;
+	}
 }
+
+
 
 .orange {
 	color: orange;
