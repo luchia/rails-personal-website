@@ -82,7 +82,7 @@ a:focus, a:visited {
 	color: #656565;
 }
 
-a:hover {
+a:hover, a:active {
 	color: orange !important;
 	background-color: transparent;
 	text-decoration: none;
@@ -303,7 +303,21 @@ label {
 input {
 	font-family: 'Ruda', sans-serif;
 	letter-spacing: 0.5px;
-	line-height: 2em;
+	height: 2em;
+	color: #656565;
+	background: #e7e7e7;
+	border: 1px solid #444444;
+}
+
+input:hover {
+	font-family: 'Ruda', sans-serif;
+	color: orange;
+}
+
+input#name, input#password {
+	font-family: 'Ruda', sans-serif;
+	letter-spacing: 0.5px;
+	height: 2em;
 	color: #656565;
 	background: #e7e7e7;
 	border: 1px solid #444444;
