@@ -1,26 +1,17 @@
-#work
-	.container
-		#text-container
-			.row
-				%section
-					.col-md-8.col-md-offset-2.pushdown
-						%h1.grey Sign In
-						%br
-						= if flash[:alert]
-							%p{ :id => "notice" }
-								=flash[:alert]
-						%br
+=title "Luchia Bloomfield - Designer, Developer"
+.container
+	.row
+		.col-md-6.col-md-offset-3.pushdown
+			%h1 Sign In
 
-						= form_tag do
-							%fieldset
-							%div
-								%br
-								=label_tag :name, 'Username:', :class => "grey"
-								=text_field_tag :name, params[:name]
-							%div
-								%br
-								=label_tag :password, 'Password:', :class => "grey"
-								=password_field_tag :password, params[:password]
-							%div
-								%br
-								=submit_tag "Login"
+			= form_tag do
+				%fieldset
+				%div
+					%br
+					=text_field_tag :name, params[:name], placeholder: "Username"
+				%div
+					%br
+					=password_field_tag :password, params[:password], placeholder: "Password"
+				%div
+					%br
+					=submit_tag "Login"

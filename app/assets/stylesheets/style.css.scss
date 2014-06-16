@@ -236,34 +236,37 @@ a:hover, a:active {
 }
 
 
-
 /* Fields */
 
-label {
-	color: #e7e7e7;
-}
 
 input {
-	font-family: 'Ruda', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
 	letter-spacing: 0.5px;
-	height: 2em;
-	color: #656565;
-	background: #e7e7e7;
-	border: 1px solid #444444;
+	height: 3em;
+	color: orange;
+	background: #FFFFFF;
+	border: 1px solid orange;
+	box-shadow: none;
+	border-radius: 0px;
+	width: 100% !important;
 }
 
 input:hover {
-	font-family: 'Ruda', sans-serif;
-	color: orange;
+	color: #FFFFFF;
+	background-color: orange;
 }
 
 input#name, input#password {
-	font-family: 'Ruda', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	letter-spacing: 0.5px;
-	height: 2em;
+	height: 3em;
 	color: #656565;
-	background: #e7e7e7;
-	border: 1px solid #444444;
+	background: #FFFFFF;
+	border: 1px solid orange;
+	box-shadow: none;
+	border-radius: 0px;
+	width: 100%;
 }
 
 button, select {
