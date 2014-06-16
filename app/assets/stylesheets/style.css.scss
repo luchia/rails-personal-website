@@ -170,6 +170,11 @@ a:hover, a:active {
 	z-index: 0;
 }
 
+#subscribe {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
 /* Image Elements */
 
 .logos {
@@ -178,8 +183,8 @@ a:hover, a:active {
 
 .centered {
     display: block;
-    margin-left: auto;
-    margin-right: auto 
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* Fields */
@@ -195,7 +200,11 @@ input {
 	box-shadow: none;
 	border-radius: 0px;
 	width: 100% !important;
+	margin: 0 auto;
 }
+	input.subscribe {
+		width: 40% !important;
+	}
 
 input:hover {
 	color: #FFFFFF;
@@ -207,7 +216,7 @@ select#portfolio_tag_id {
 	padding-top: 10px;
 }
 
-input#name, input#password, input#portfolio_title, textarea#portfolio_content, select#portfolio_tag_id, input#journal_title, textarea#journal_content, input#user_name, input#user_password, input#user_password_confirmation {
+input#name, input#password, input#portfolio_title, textarea#portfolio_content, select#portfolio_tag_id, input#journal_title, textarea#journal_content, input#user_name, input#user_password, input#user_password_confirmation{
 	font-family: 'Roboto', sans-serif;
 	letter-spacing: 0.5px;
 	height: 3em;
@@ -220,6 +229,22 @@ input#name, input#password, input#portfolio_title, textarea#portfolio_content, s
 	border-radius: 0px;
 	width: 100%;
 	padding: 7px 7px;
+}
+
+input#email {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.5px;
+	height: 3em;
+	color: #656565;
+	background: #FFFFFF;
+	border: 1px solid orange;
+	font-size: 1.5em;
+	line-height:1.5em;
+	box-shadow: none;
+	border-radius: 0px;
+	width: 40% !important;
+	padding: 7px 7px;
+	text-align: center;
 }
 
 button, select {
