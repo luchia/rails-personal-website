@@ -125,7 +125,7 @@ a:hover, a:active {
 	text-transform: uppercase;
 }
 
-.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover, .navbar .nav > li > a:focus, .navbar .nav > li > a:active {
 	color: orange;
 	background-color: transparent;
 }
