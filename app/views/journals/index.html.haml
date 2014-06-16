@@ -2,8 +2,7 @@
 #work.img-responsive
   .container
     .row
-      .col-md-8.col-md-offset-2
-        %h2.grey.about Journal
+      .col-md-8.col-md-offset-2.pushdown
         -if User.find_by_id(session[:user_id])
           %p.left-aligned=link_to 'New Entry', new_journal_path
         -else
@@ -12,12 +11,12 @@
         %p=will_paginate
 
         - @journals.each do |journal|
-          %h3
+          %h3.text-center
             =link_to journal.title, journal
 
-          %p.grey= journal.created_at.strftime("%d %b, %Y")
+          %p.text-center= journal.created_at.strftime("%d %b, %Y")
 
-          %p= truncate(journal.content, length: 250)
+          %p.text-center= truncate(journal.content, length: 250)
 
           %p.text-right
             -if User.find_by_id(session[:user_id])
@@ -28,4 +27,14 @@
               %br
 
         %p=will_paginate
+        %br
+        %br
 
+#contact
+  .container
+    .about
+      %section
+        %h1.text-center
+          Brisbane, San Francisco, London, Bangkok.
+        %h1.text-center
+          =link_to 'Hire me', '/contact'

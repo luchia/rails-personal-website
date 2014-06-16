@@ -1,6 +1,5 @@
 /* Fontfaces */
 @import url(http://fonts.googleapis.com/css?family=Roboto:300);
-@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:700);
 
 
 /* Built in Elements */
@@ -26,13 +25,13 @@ section {
 h1 {
 	color: #1c1c1c;
 	font-size: 3em;
-	font-family: 'Alegreya Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	letter-spacing: 3px;
 }
 
 h2 {
-	color: #FFFFFF;
-	font-family: 'Alegreya Sans', sans-serif;
+	color: #444444;
+	font-family: 'Roboto', sans-serif;
 	font-size: 2em;
 	line-height:1.5em;
 	letter-spacing: 1.5px;
@@ -70,20 +69,19 @@ li {
 }
 
 a {
-	background-color: transparent !important;
-	color: #656565;
+	background-color: #FFFFFF;
+	color: #444444;
 }
 
 a:focus, a:visited {
 	text-decoration: none;
-	font-family: 'Ruda', sans-serif;
-	background-color: transparent;
-	color: #656565;
+	background-color: #ffffff;
+	color: #444444;
 }
 
 a:hover, a:active {
 	color: orange !important;
-	background-color: transparent;
+	background-color: #ffffff !important;
 	text-decoration: none;
 }
 
@@ -91,55 +89,12 @@ a:hover, a:active {
 	padding-top: 30%;
 }
 
-.catchphrase {
-	font-family: 'Ruda', sans-serif;
-	letter-spacing: 1px;
-	font-size:2em;
-}
-
 .about {
 	padding-top: 15%
 }
 
-.brisbane {
-	background-color: orange;
-	padding-left: 10px;
-	padding-right: 10px;
-	color: #2c2c2c;
-
-	a:hover {
-		color: #2c2c2c !important;
-	}
-}
-
-
-
-.orange {
-	color: orange;
-}
-
-.left-aligned {
-	float: right;
-}
-
-.white {
-	color: #e7e7e7;
-}
-
-.grey {
-	color: #656565;
-}
-
-.italic {
-	font-size: 2.5em;
-}
-
-.bigger {
-	font-size: 3.5em;
-}
-
 .pushdown {
-	padding-top: 15%;
+	padding-top: 10%;
 }
 
 

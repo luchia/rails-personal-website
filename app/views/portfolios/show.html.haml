@@ -1,14 +1,13 @@
 =title @portfolio.title 
-#footer.img-responsive
-	.container
-		#text-container
-			.col-md-offset-2.col-md-8
-				%br
-				%h2.grey
-					= @portfolio.title
 
-				%p.grey
-					=markdown(@portfolio.content).html_safe
-					
-				%h3.grey.text-right
-					=link_to 'Back', portfolios_path
+.container.img-responsive
+	.col-md-offset-2.col-md-8.pushdown
+		%br
+		%h2
+			= @portfolio.title
+
+		%p
+			=markdown(@portfolio.content).html_safe
+			
+		%h3.text-right
+			=link_to 'Back', portfolios_path

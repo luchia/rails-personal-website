@@ -3,8 +3,7 @@
   .container
     #text-container
       .row
-        .col-md-8.col-md-offset-2
-          %h2.grey.about Portfolio
+        .col-md-8.col-md-offset-2.pushdown
           -if User.find_by_id(session[:user_id])
             %p.left-aligned
               =link_to 'New Entry', new_portfolio_path
@@ -29,9 +28,9 @@
 
 #contact
   .container
-    .pushdown
+    .about
       %section
         %h1.text-center
-          Brisbane, San Francisco, London, Berlin.
+          Brisbane, San Francisco, London, Bangkok.
         %h1.text-center
-          =link_to 'Hire me.', '/contact'
+          =link_to 'Hire me', '/contact'
