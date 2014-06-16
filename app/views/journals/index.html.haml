@@ -8,8 +8,6 @@
         -else
           %br
 
-        %p=will_paginate
-
         - @journals.each do |journal|
           %h3.text-center
             =link_to journal.title, journal

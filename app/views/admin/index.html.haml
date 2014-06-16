@@ -1,8 +1,13 @@
-#about-home
-	.container
-		#text-container
-			.row
-				%section
-					.col-md-6.col-md-offset-3.pushdown
-						%h1.grey Welcome
-						%h3 Let's get started
+
+.container.pushdown
+	.row
+		.col-md-6
+			%h2 The last portfolio entry
+			-@portfolios.each do |portfolio|
+				=link_to markdown(portfolio.content).first(72).html_safe, portfolio
+
+		.col-md-6
+			%h2 The last journal entry
+			-@journals.each do |journal|
+				%h3=link_to journal.title, journal
+				%p= journal.content
