@@ -3,7 +3,6 @@
 @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:700);
 
 
-
 /* Built in Elements */
 
 body {
@@ -147,12 +146,8 @@ a:hover, a:active {
 
 /* Navigation Elements */
 
-#navigation {
-	background-color: #000000;
-}
-
 .navbar {
-	background-color: #000000;
+	background-color: transparent;
 	max-width: 100%;
 	position: fixed;
 }
@@ -160,7 +155,6 @@ a:hover, a:active {
 .navbar-inner {
 	padding-left: 30px;
 	padding-right: 30px;
-	background-color: #000000 !important;
 	border: none;
 }
 
@@ -199,9 +193,8 @@ a:hover, a:active {
 	min-height: 100%;
 	min-width: 100%;
 	width: 100%;
-	height: auto;
-	background-image: url(image_path('bg.jpg'));
-	background-color: #000000;
+	background-image: url(image_path('bg-white.jpg'));
+	background-color: #FFFFFF;
 	display: block;
 	top: 0;
 	left: 0;
@@ -250,7 +243,7 @@ a:hover, a:active {
 }
 
 #work {
-	background-color: #e7e7e7;
+	background-color: #ffffff;
 	display: block;
 	max-width: 100%;
 }

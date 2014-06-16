@@ -1,5 +1,8 @@
 Luchia::Application.routes.draw do
   resources :tags
+  resources :users
+  resources :portfolios
+  resources :journals
 
   get 'admin' => 'admin#index'
   get 'contact' => 'contact#index'
@@ -14,11 +17,6 @@ Luchia::Application.routes.draw do
     post 'login' => :create
     delete 'logout' => :destroy
   end
-
-  resources :users
-  resources :portfolios
-  resources :journals
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

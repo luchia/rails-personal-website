@@ -3,37 +3,9 @@
 	%section
 		.container
 			.row
-				.col-md-offset-3.col-md-8.text-justify.slogan
+				.col-md-offset-4.col-md-8.text-justify.slogan
 					%h1.orange
 						Hello, I'm Luchia.
 					%h1.grey.catchphrase
 						I create unique digital solutions that increase traffic and revenue. Scroll down to see more.
 					%p.grey 
-
-#work.img-responsive
-	.container
-		#text-container
-			%section
-				.row
-					.col-md-8.col-md-offset-2
-						%h2.grey My Recent Work
-						-@portfolios.each do |portfolio|
-							=link_to markdown(portfolio.content).first(72).html_safe, portfolio
-							%br
-
-
-						%p.left-aligned
-							%br
-							%br
-							=link_to 'See more', '/portfolios/'
-
-#contact
-	.container
-		.pushdown
-			%section
-				%h3.text-center.italic
-					%span.brisbane
-						Let's make your business shine.
-				%h2.text-center.italic
-					%span.brisbane
-						=link_to 'Contact me now.', '/contact'
