@@ -12,20 +12,16 @@
       %br
 
   .field
-    = f.label :title, :class => "grey"
-    %br
-    = f.text_field :title
+    = f.text_field :title, placeholder: "Title"
 
   .field
-    = f.label :content, :class => "grey"
-    %br
-    = f.text_area :content, rows: 10
+    = f.text_area :content, placeholder: "Put the portfolio entry in here", rows: 10
 
-  .field
-    =f.label :tag_id
-    %br
-    =f.collection_select(:tag_id, Tag.all, :id, :tag)
-    %br
-
-  .actions
-    = f.submit
+  .row
+    .col-md-6
+      .field
+        =f.collection_select(:tag_id, Tag.all, :id, :tag)
+        %br
+    .col-md-6
+      .actions
+        = f.submit

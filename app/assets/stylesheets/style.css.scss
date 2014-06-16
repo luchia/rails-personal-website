@@ -257,16 +257,23 @@ input:hover {
 	background-color: orange;
 }
 
-input#name, input#password {
+select#portfolio_tag_id {
+	font-size: 1.5em;
+	padding-top: 10px;
+}
+
+input#name, input#password, input#portfolio_title, textarea#portfolio_content, select#portfolio_tag_id {
 	font-family: 'Roboto', sans-serif;
 	letter-spacing: 0.5px;
 	height: 3em;
 	color: #656565;
 	background: #FFFFFF;
 	border: 1px solid orange;
+	font-size: 1.5em;
 	box-shadow: none;
 	border-radius: 0px;
 	width: 100%;
+	padding: 7px 7px;
 }
 
 button, select {
@@ -277,14 +284,8 @@ button, select {
 	border: 1px solid #444444;
 }
 
-textarea {
-	width: 400px;
-	height: 300px;
-	font-family: 'Ruda', sans-serif;
-	letter-spacing: 0.5px;
-	color: #656565;
-	background: #e7e7e7;
-	border: 1px solid #444444;
+textarea#portfolio_content {
+	height: 300px !important;
 }
 
 
