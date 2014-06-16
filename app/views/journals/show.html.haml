@@ -18,6 +18,6 @@
 		%br
 		=form_tag('/emailapi/subscribe', method: "post", id: "subscribe", remote: "true", :class => "centered") do
 			.centered
-				=email_field(:email, :address, {id: "email", placeholder: "email address"})
+				=email_field(:email, :address, {id: "email", placeholder: "Email Address"})
 				%br
 				=submit_tag("Sign me up!", :class=> "subscribe")
