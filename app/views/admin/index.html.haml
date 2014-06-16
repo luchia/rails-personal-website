@@ -10,4 +10,4 @@
 			%h2 The last journal entry
 			-@journals.each do |journal|
 				%h3=link_to journal.title, journal
-				%p= journal.content
+				%p= journal.content.first(200)
