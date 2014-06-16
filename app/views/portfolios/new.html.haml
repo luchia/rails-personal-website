@@ -1,13 +1,8 @@
-#work
-	.container
-		#text-container
-			.row
-				.col-md-8.col-md-offset-2
-					%h2 New Portfolio Entry
-					.row
-						.col-md-5
-							= render 'form'
-						.col-md-5
-							#markup-area
-
-					= link_to 'Back', portfolios_path
+.container.pushdown
+	.row
+		.col-md-2
+			%h2 New Portfolio Entry
+			%p ----
+			%p= link_to 'Back', portfolios_path
+		.col-md-8
+			= render 'form'

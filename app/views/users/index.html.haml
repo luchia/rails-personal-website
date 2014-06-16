@@ -1,18 +1,11 @@
-#footer
-  %section
-    .container
-      #text-container
-        .row
-          .col-md-8.col-md-offset-2
-            %h2.grey Listing Users
-            .text-right
-              %p=link_to 'New User', new_user_path
-            %br
+.container.pushdown
+  .row
+    .col-md-2
+      %h2 Users
+      %p=link_to 'New User', new_user_path
 
-            -@users.each do |user|
-              %p=user.name
-              %br
-              %p.text-right=link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
-
-            %br
-            
+    .col-md-8
+      -@users.each do |user|
+        %h1.text-center=user.name
+        %br
+        %p.text-center=link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }

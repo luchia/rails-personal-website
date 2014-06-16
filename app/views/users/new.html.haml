@@ -1,9 +1,9 @@
-#footer
-	.container
-		#text-container
-			.col-md-offset-2.col-md-8
-				%br
-				%h2.orange New User
-				= render 'form'
+.container.pushdown
+	.row
+		.col-md-2
+			%h2 New User
+			%p ---
+			%p= link_to 'Back', users_path
 
-				= link_to 'Back', users_path
+		.col-md-8
+			= render 'form'

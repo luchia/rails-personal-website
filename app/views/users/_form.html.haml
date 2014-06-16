@@ -12,19 +12,13 @@
       %br
 
   .field
-    = f.label :name, 'Name:', :class => "grey"
-    %br
-    = f.text_field :name, size: 40
+    = f.text_field :name, placeholder: "Username"
 
   .field
-    = f.label :password, 'Password:', :class => "grey"
-    %br
-    = f.password_field :password, size: 40
+    = f.password_field :password, placeholder: "Password"
 
   .field
-    = f.label :password_confirmation, 'Confirm:', :class => "grey"
-    %br
-    = f.password_field :password_confirmation, size: 40
+    = f.password_field :password_confirmation, placeholder: "Confirm Password"
 
   .actions
     = f.submit

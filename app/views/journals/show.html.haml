@@ -1,16 +1,12 @@
-=title @journal.title
-.container.img-responsive
-	.col-md-offset-2.col-md-8.pushdown
-		%br
-		%h2
-			= @journal.title
+=title @journal.title 
 
-		%p
-			= @journal.created_at.strftime("%d %b, %Y")
-		%br
+.container.pushdown.img-responsive
+	.row
+		.col-md-2
+			%p= link_to 'Back', journals_path
+		.col-md-8
+			%h2
+				= @journal.title
 
-		%p
-			=markdown(@journal.content).html_safe
-
-		%h3.text-right
-			=link_to 'Back', journals_path
+			%p
+				=markdown(@journal.content).html_safe

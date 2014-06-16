@@ -11,16 +11,10 @@
           = msg
 
   .field
-    = f.label :title, :class => "grey"
-    %br 
-    %br
-    = f.text_field :title
+    = f.text_field :title, placeholder: "Journal title"
 
   .field
-    = f.label :content, :class => "grey"
-    %br
-    %br
-    = f.text_area :content, rows: 10
+    = f.text_area :content, placeholder: "Put the journal content here", rows: 10
     %br
 
   .actions

@@ -1,35 +1,34 @@
 =title "Branding, Web Design & Development for Small Businesses"
-#work.img-responsive
-  .container
-    #text-container
-      .row
-        .col-md-8.col-md-offset-2.pushdown
+
+.container.pushdown.img-responsive
+  .row
+    .col-md-2
+      -if User.find_by_id(session[:user_id])
+        %p.left-aligned
+          =link_to 'New Entry', new_portfolio_path
+      -else
+        %br
+
+    .col-md-8
+      -@portfolios.each do |portfolio|
+        =link_to markdown(portfolio.content).first(72).html_safe, portfolio
+        %br
+        
+        %p.text-right
           -if User.find_by_id(session[:user_id])
-            %p.left-aligned
-              =link_to 'New Entry', new_portfolio_path
-          -else
+            =link_to 'Edit', edit_portfolio_path(portfolio)
+            |
+            =link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' }
+          -else 
             %br
 
-          -@portfolios.each do |portfolio|
-            =link_to markdown(portfolio.content).first(72).html_safe, portfolio
-            %br
-            
-            %p.text-right
-              -if User.find_by_id(session[:user_id])
-                =link_to 'Edit', edit_portfolio_path(portfolio)
-                |
-                =link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' }
-              -else 
-                %br
-
-          %p=will_paginate
+      %p=will_paginate
 
 
 #contact
-  .container
-    .about
-      %section
-        %h1.text-center
-          Brisbane, San Francisco, London, Bangkok.
-        %h1.text-center
-          =link_to 'Hire me', '/contact'
+  .container.about
+    %section
+      %h1.text-center
+        Brisbane, San Francisco, London, Bangkok.
+      %h1.text-center
+        =link_to 'Hire me', '/contact'
