@@ -10,3 +10,14 @@
 
 			%p
 				=markdown(@journal.content).html_safe
+
+#subscribe
+	.container
+		%h1.text-center
+			Like my writing? Subscribe below:
+		%br
+		=form_tag('/emailapi/subscribe', method: "post", id: "subscribe", remote: "true", :class => "centered") do
+			.centered
+				=email_field(:email, :address, {id: "email", placeholder: "email address"})
+				%br
+				=submit_tag("Sign me up!", :class=> "subscribe")
