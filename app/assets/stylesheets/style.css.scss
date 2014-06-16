@@ -102,7 +102,6 @@ a:hover, a:active {
 /* Navigation Elements */
 
 .navbar {
-	background-color: transparent;
 	max-width: 100%;
 	position: fixed;
 }
@@ -117,6 +116,7 @@ a:hover, a:active {
 	padding-top: 15px;
 	color: #FFFFFF;
 	padding-left: 15px;
+	background-color: #FFFFFF;
 }
 
 .nav li a {
@@ -124,7 +124,6 @@ a:hover, a:active {
 	text-shadow: none !important;
 	text-transform: uppercase;
 }
-
 
 .navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
 	color: orange;
@@ -161,26 +160,6 @@ a:hover, a:active {
     background-attachment: fixed;
 }
 
-#work-home {
-	min-height: 100%;
-	min-width: 100%;
-	width: 100%;
-	height: auto;
-	background-image: url(image_path('bg3.jpg'));
-	background-color: #000000;
-	background-position: fixed;
-	display: block;
-	max-width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 0;
-	margin: 0 auto;
-    padding: 0;
-    position: relative;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 #contact {
 	height: 450px;
 	background-image: url(image_path('brisbane.jpg'));
@@ -190,34 +169,6 @@ a:hover, a:active {
 	max-width: 100%;
 	z-index: 0;
 }
-
-#about {
-	background-color: #1c1c1c;
-	display: block;
-	max-width: 100%;
-}
-
-#work {
-	background-color: #ffffff;
-	display: block;
-	max-width: 100%;
-}
-
-#container {
-	max-width: 800px;
-	margin-left: 40%;
-	padding-right: 10%;
-}
-
-#footer {
-	background-color: #e7e7e7;
-	display: block;
-	max-width: 100%;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-
 
 /* Image Elements */
 
@@ -231,13 +182,7 @@ a:hover, a:active {
     margin-right: auto 
 }
 
-.thumbnails-img {
-	max-width:25%;
-}
-
-
 /* Fields */
-
 
 input {
 	font-family: 'Roboto', sans-serif;
@@ -296,23 +241,4 @@ textarea#portfolio_content, textarea#journal_content {
 
 .navbar-toggle .icon-bar {
 	background-color: orange;
-}
-
-
-/**** Categories styling *****/
-
-
-ul.tags {
-	float: left;
-	display: inline !important;
-}
-
-li.categories {
-	list-style-type: none !important;
-	display: inline;
-
-	a {
-		font-family: 'Alegreya Sans', sans-serif;
-		font-size: 2em !important;
-	}
 }
