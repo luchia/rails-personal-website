@@ -8,7 +8,7 @@
 body {
 	padding: 0;
 	margin: 0;
-	background-color: #000000;
+	background-color: #FFFFFF;
 	height: 100%;
 }
 
@@ -25,7 +25,7 @@ section {
 
 h1 {
 	color: #1c1c1c;
-	font-size: 3.5em;
+	font-size: 3em;
 	font-family: 'Alegreya Sans', sans-serif;
 	letter-spacing: 3px;
 }
@@ -252,11 +252,6 @@ a:hover, a:active {
 	max-width: 800px;
 	margin-left: 40%;
 	padding-right: 10%;
-}
-
-#text-container {
-	padding-top: 5%;
-	padding-bottom: 5%;
 }
 
 #footer {
