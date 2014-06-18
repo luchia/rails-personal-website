@@ -5,7 +5,7 @@ class JournalsController < ApplicationController
   # GET /journals
   # GET /journals.json
   def index
-    @journals = Journal.order('created_at DESC').paginate(:page => params[:page], :per_page => 5)
+    @journals = Journal.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /journals/1
