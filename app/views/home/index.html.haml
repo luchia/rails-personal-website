@@ -2,8 +2,15 @@
 #home
 	.container
 		.row
-			.col-md-offset-4.col-md-8.slogan
+			.col-md-offset-4.col-md-8.about
 				%h1.home
 					Hello, I'm Luchia.
 				%h1.home
 					I solve business problems with unique digital solutions.
+
+				%br
+				%br
+					.row
+						-@portfolios.each do |portfolio|
+							.col-md-4.img-responsive
+								=link_to markdown(portfolio.content).first(72).html_safe, portfolio
