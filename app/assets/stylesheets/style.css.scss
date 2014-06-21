@@ -123,8 +123,6 @@ a:hover, a:active {
 }
 
 .nav li a {
-	text-decoration: none;
-	text-shadow: none !important;
 	text-transform: uppercase;
 }
 
@@ -135,6 +133,62 @@ a:hover, a:active {
 
 .nav-collapse .nav > li > a {
 	font-weight: normal !important;
+}
+
+.navbar-nav a {
+	padding: 10px;
+	color: #333;
+	font-weight: 700;
+	text-shadow: none;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.navbar-nav a::before,
+.navbar-nav a::after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: orange;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.navbar-nav a::before {
+	top: 0;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.navbar-nav a::after {
+	bottom: 0;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.navbar-nav a:hover,
+.navbar-nav a:focus {
+	color: orange;
+}
+
+.navbar-nav a:hover::before,
+.navbar-nav a:focus::before,
+.navbar-nav a:hover::after,
+.navbar-nav a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
 }
 
 @media screen and (max-width: 480px) {
