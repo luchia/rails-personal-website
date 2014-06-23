@@ -1,32 +1,31 @@
-.navbar.navbar-inverse.navbar-fluid-top
-	.container
-		%a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
-			%span{ :class => "sr-only" } Toggle navigation
-			%span.icon-bar
-			%span.icon-bar
-			%span.icon-bar
-		.container-fluid.nav-collapse
-			%ul.nav.navbar-nav.pull-right
-				-if User.find_by_id(session[:user_id])
-					%li
-						=link_to 'Home', '/'
-					%li
-						=link_to 'Work', '/portfolios/'
-					%li
-						=link_to 'Journal', '/journals/'
-					%li
-						=link_to 'Get in Touch', '/contact/'
-					%li
-						=link_to 'Users', '/users'
-					%li
-						=link_to 'Log Out', logout_path, method: :delete
+.navbar-fixed-top
+	%button{ :type => "#collapsible", :class => "btn btn-navbar navbar-toggle", "data-toggle" => "collapse", "data-target" => ".nav-collapse" }
+		%span{ :class=> "sr-only" } Toggle Navigation
+		%span.icon-bar
+		%span.icon-bar
+		%span.icon-bar
+	#nav.container.nav-collapse
+		%ul.nav.navbar-nav.pull-right
+			-if User.find_by_id(session[:user_id])
+				%li
+					=link_to 'Home', '/'
+				%li
+					=link_to 'Work', '/portfolios/'
+				%li
+					=link_to 'Journal', '/journals/'
+				%li
+					=link_to 'Get in Touch', '/contact/'
+				%li
+					=link_to 'Users', '/users'
+				%li
+					=link_to 'Log Out', logout_path, method: :delete
 
-				-else
-					%li
-						=link_to 'Home', '/'
-					%li
-						=link_to 'Work', '/portfolios/'
-					%li
-						=link_to 'Journal', '/journals/'
-					%li
-						=link_to 'Get in Touch', '/contact'
+			-else
+				%li
+					=link_to 'Home', '/'
+				%li
+					=link_to 'Work', '/portfolios/'
+				%li
+					=link_to 'Journal', '/journals/'
+				%li
+					=link_to 'Get in Touch', '/contact'
