@@ -12,7 +12,7 @@ class TagsController < ApplicationController
   # GET /tags/1.json
   def show
     @tags = Tag.all
-    @portfolios = Portfolio.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
+    @portfolios = Portfolio.order('created_at DESC')
   end
 
   # GET /tags/new
