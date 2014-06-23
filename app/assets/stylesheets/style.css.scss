@@ -111,13 +111,9 @@ a:hover, a:active {
 
 .navbar-inverse {
 	background-color: #FFFFFF;
-	border: 0px
-}
-
-.navbar-inner {
-	padding-left: 30px;
-	padding-right: 30px;
-	border: none;
+	border: 0px;
+	float: right;
+	padding-right: 0px;
 }
 
 .nav li {
@@ -130,7 +126,7 @@ a:hover, a:active {
 
 .navbar-inverse .nav > li > a {
 	text-transform: uppercase;
-	text-shadow: 0;
+	text-shadow: 0px;
 }
 
 .navbar .nav > li > a:focus, .navbar .nav > li > a:hover, .navbar .nav > li > a:focus, .navbar .nav > li > a:active {
