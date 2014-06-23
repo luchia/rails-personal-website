@@ -12,6 +12,7 @@
       -else
         %br
 
+      %p=link_to 'All', portfolios_path
       -@tags.each do |tag|
         %ul.portfolios
           %li=link_to tag.tag, tag
