@@ -12,7 +12,7 @@ class TagsController < ApplicationController
   # GET /tags/1.json
   def show
     @tags = Tag.all
-    @tag.portfolios = Portfolio.order('created_at DESC')
+    @portfolios = Portfolio.order('created_at DESC')
   end
 
   # GET /tags/new
