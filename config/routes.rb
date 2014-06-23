@@ -9,6 +9,7 @@ Luchia::Application.routes.draw do
   get 'portfolios' => 'portfolios#index'
   get 'journals' => 'journals#index'
   get 'users' => 'users#index'
+  get 'tags' => 'tags#index'
 
 
   controller :sessions do

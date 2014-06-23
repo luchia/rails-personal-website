@@ -1,30 +1,33 @@
 =title @tag.tag
-#footer.img-responsive
-	.container
-		#text-container
-			.col-md-offset-2.col-md-8
-				%h2.grey
-					= @tag.tag
-				-if User.find_by_id(session[:user_id])
-					%p.left-aligned
-						=link_to 'New Entry', new_portfolio_path
-				-else
-					 
-				%p
-					-if @tag.portfolios.size > 0
-						-@tag.portfolios.each do |portfolio|
-							=link_to markdown(portfolio.content).first(72).html_safe, portfolio
-							%br
 
-							%p.text-right
-								-if User.find_by_id(session[:user_id])
-									=link_to 'Edit', edit_portfolio_path(portfolio)
-									|
-									=link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' }
-								-else 
-									%br
+.container.pushdown.img-responsive
+  .row
+    .col-md-2
+      -if User.find_by_id(session[:user_id])
+        %p
+          =link_to 'New Entry', new_portfolio_path
+          %br
+          _____
+          %br
+      -else
+        %br
 
-					-else
-						%p
-							Oops, I don't know what you're searching for - but it's not here!
-						%br
+      -@tags.each do |tag|
+        %ul.portfolios
+          %li=link_to tag.tag, tag
+
+    .col-md-8
+      -if @tag.portfolios.size > 0
+        -@tag.portfolios.each do |portfolio|
+          =link_to markdown(portfolio.content).first(72).html_safe, portfolio
+          %br
+          %p.text-right
+            -if User.find_by_id(session[:user_id])
+              =link_to 'Edit', edit_portfolio_path(portfolio)
+              |
+              =link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' }
+            -else
+              %br
+      -else
+        %p No items in this category :)
+        %br

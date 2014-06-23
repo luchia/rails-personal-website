@@ -1,26 +1,26 @@
 =title "Branding, Web Design & Development for Small Businesses"
-#work.img-responsive
-  .container
-    #text-container
-      .row
-        .col-md-8.col-md-offset-2
 
+.container.pushdown.img-responsive
+  .row
+    .col-md-2
+      -if User.find_by_id(session[:user_id])
+        %p
+          =link_to 'New Tag', new_tag_path
+          %br
+          _____
+          %br
+      -else
+        %br
+
+    .col-md-8
+      -@tags.each do |tag|
+        %p=link_to tag.tag, tag
+
+        %br    
+        %p.text-right
           -if User.find_by_id(session[:user_id])
-            %p.left-aligned.pushdown
-              =link_to 'New Entry', new_tag_path
-          -else
-             
-
-          -@tags.each do |tag|
-            %ul.tags.pushdown
-              %li.categories
-                =link_to tag.tag, tag
-
-              
-              %p.text-right
-                -if User.find_by_id(session[:user_id])
-                  =link_to 'Edit', edit_tag_path(tag)
-                  |
-                  =link_to 'Delete', tag, method: :delete, data: { confirm: 'Are you sure?' }
-                -else 
-                  %br
+            =link_to 'Edit', edit_tag_path(tag)
+            |
+            =link_to 'Delete', tag, method: :delete, data: { confirm: 'Are you sure?' }
+          -else 
+            %br

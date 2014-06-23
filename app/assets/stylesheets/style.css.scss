@@ -64,6 +64,13 @@ p, .pagination {
 	text-align: center;
 }
 
+ul.portfolios {
+	list-style-type: none;
+	list-style-position:outside;
+	margin:0;
+	padding:0;
+}
+
 li {
 	color: #656565;
 	line-height: 2em;
@@ -276,7 +283,7 @@ select#portfolio_tag_id {
 	padding-top: 10px;
 }
 
-input#name, input#password, input#portfolio_title, textarea#portfolio_content, select#portfolio_tag_id, input#journal_title, textarea#journal_content, input#user_name, input#user_password, input#user_password_confirmation{
+input#name, input#password, input#portfolio_title, textarea#portfolio_content, select#portfolio_tag_id, input#journal_title, textarea#journal_content, input#user_name, input#user_password, input#user_password_confirmation, input#tag_tag {
 	font-family: 'Roboto', sans-serif;
 	letter-spacing: 0.5px;
 	height: 3em;

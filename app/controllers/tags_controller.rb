@@ -5,13 +5,13 @@ class TagsController < ApplicationController
   # GET /tags
   # GET /tags.json
   def index
-    @tags = Tag.all.order('created_at DESC')
-    @portfolios = Portfolio.all.order('created_at DESC')
+    @tags = Tag.all
   end
 
   # GET /tags/1
   # GET /tags/1.json
   def show
+    @tags = Tag.all
     @portfolios = Portfolio.all.order('created_at DESC')
   end
 
