@@ -68,4 +68,4 @@ gem "twitter-bootstrap-rails"
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "gibbon"
+gem 'gibbon', git: 'git://github.com/amro/gibbon.git'

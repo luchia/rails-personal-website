@@ -12,6 +12,10 @@ Luchia::Application.routes.draw do
   get 'tags' => 'tags#index'
   get 'about' => 'about#index'
 
+  # root 'emailapi#index'
+  post 'emailapi/subscribe' => 'emailapi#subscribe'
+
+
 
   controller :sessions do
     get 'login' => :new
