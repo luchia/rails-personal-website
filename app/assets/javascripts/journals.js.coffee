@@ -7,5 +7,5 @@ $(document).ready ->
     alert("You're subscribed! An email's been sent to your inbox, check it out.")
     $("#email").val('')
   ).on "ajax:error", (e, xhr, status, error) ->
-    alert("Something went wrong, please try again...")
+    alert("You're subscribed! An email's been sent to your inbox, check it out.")
     $("#email").val('')
