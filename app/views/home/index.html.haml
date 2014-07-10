@@ -10,7 +10,7 @@
 
 				%br
 				%br
-					.row
-						-@portfolios.each do |portfolio|
-							.col-md-3.img-responsive
-								=link_to markdown(portfolio.content).first(72).html_safe, portfolio
+				.row
+					-@portfolios.each do |portfolio|
+						.col-md-3.img-responsive
+							=link_to markdown(portfolio.content).first(72).html_safe, portfolio
