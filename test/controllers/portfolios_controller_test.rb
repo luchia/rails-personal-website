@@ -4,7 +4,7 @@ class PortfoliosControllerTest < ActionController::TestCase
   setup do
     @portfolio = portfolios(:one)
     @update = { title: 'Entry One',
-      content: 'This is an entry' }
+      content: 'This is an entry', body: 'hello' }
   end
 
   test "should get index" do
