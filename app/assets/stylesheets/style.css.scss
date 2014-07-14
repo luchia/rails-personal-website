@@ -283,7 +283,7 @@ select#portfolio_tag_id {
 	padding-top: 10px;
 }
 
-input#name, input#password, input#portfolio_title, textarea#portfolio_content, select#portfolio_tag_id, input#journal_title, textarea#journal_content, input#user_name, input#user_password, input#user_password_confirmation, input#tag_tag {
+input#name, input#password, input#portfolio_title, textarea#portfolio_content, textarea#portfolio_body, select#portfolio_tag_id, input#journal_title, textarea#journal_content, input#user_name, input#user_password, input#user_password_confirmation, input#tag_tag {
 	font-family: 'Roboto', sans-serif;
 	letter-spacing: 0.5px;
 	height: 3em;
@@ -322,7 +322,7 @@ button, select {
 	border: 1px solid #444444;
 }
 
-textarea#portfolio_content, textarea#journal_content {
+textarea#portfolio_content, textarea#journal_content, textarea#portfolio_body {
 	height: 300px !important;
 }
 
