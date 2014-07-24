@@ -10,7 +10,8 @@
 				= @portfolio.title
 
 			%p
-				=@portfolio.body
+				=markdown(@portfolio.body).html_safe
+			%p
 				=markdown(@portfolio.content).html_safe
 			%br
 			%br
