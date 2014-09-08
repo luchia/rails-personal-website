@@ -9,6 +9,7 @@ gem 'rails', '4.0.1'
 
 group :production do
   gem 'rails_12factor'
+  gem 'unicorn'
 end
 
 gem 'pg'
