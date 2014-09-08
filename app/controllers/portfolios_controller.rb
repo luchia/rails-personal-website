@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  caches_page :portfolios
+  caches_page :index, :show
   before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
   skip_before_filter :authorize, :only => [:show, :index]
 

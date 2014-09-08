@@ -1,5 +1,5 @@
 class JournalsController < ApplicationController
-  caches_page :journals
+  caches_page :index, :show
   before_action :set_journal, only: [:show, :edit, :update, :destroy]
   skip_before_filter :authorize, :only => [:show, :index]
 
