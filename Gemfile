@@ -70,3 +70,7 @@ gem "twitter-bootstrap-rails"
 # gem 'debugger', group: [:development, :test]
 
 gem 'gibbon', git: 'git://github.com/amro/gibbon.git'
+
+gem 'actionpack-page_caching'
+
+gem 'actionpack-action_caching'
