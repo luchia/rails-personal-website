@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  caches_page :portfolios
   before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
   skip_before_filter :authorize, :only => [:show, :index]
 
@@ -43,6 +44,8 @@ class PortfoliosController < ApplicationController
   # PATCH/PUT /portfolios/1
   # PATCH/PUT /portfolios/1.json
   def update
+    expire_page :action => index
+    
     respond_to do |format|
       if @portfolio.update(portfolio_params)
         format.html { redirect_to @portfolio, notice: 'Portfolio was successfully updated.' }

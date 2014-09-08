@@ -1,4 +1,5 @@
 class JournalsController < ApplicationController
+  caches_page :journals
   before_action :set_journal, only: [:show, :edit, :update, :destroy]
   skip_before_filter :authorize, :only => [:show, :index]
 
@@ -41,6 +42,8 @@ class JournalsController < ApplicationController
   # PATCH/PUT /journals/1
   # PATCH/PUT /journals/1.json
   def update
+    expire_page :action => index
+    
     respond_to do |format|
       if @journal.update(journal_params)
         format.html { redirect_to @journal, notice: 'Journal was successfully updated.' }

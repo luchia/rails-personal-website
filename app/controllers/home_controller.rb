@@ -4,7 +4,6 @@ class HomeController < ApplicationController
 
   def index
   	@portfolios = Portfolio.order("created_at DESC").limit(3)
-  	expire_page :action => :index
   end
 
 end
