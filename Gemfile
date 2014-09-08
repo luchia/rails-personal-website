@@ -74,3 +74,5 @@ gem 'gibbon', git: 'git://github.com/amro/gibbon.git'
 gem 'actionpack-page_caching'
 
 gem 'actionpack-action_caching'
+
+gem 'newrelic_rpm'
