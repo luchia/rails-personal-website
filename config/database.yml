@@ -14,3 +14,12 @@ test: &TEST
 
 cucumber:
   <<: *TEST
+
+production:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: luchia_production
+  pool: 5
+  username:
+  password: 
