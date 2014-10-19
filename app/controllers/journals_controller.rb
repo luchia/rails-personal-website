@@ -1,6 +1,5 @@
 class JournalsController < ApplicationController
   before_action :set_journal, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :authorize, :only => [:show, :index]
 
   # GET /journals
   # GET /journals.json

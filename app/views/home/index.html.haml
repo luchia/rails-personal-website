@@ -1,17 +1,17 @@
-=title "Luchia Bloomfield - Help Your Business Grow"
+=title "Luchia Bloomfield"
 #home
 	.container
 		.row
-			.col-md-offset-4.col-md-8.about
-				%h1.home
-					Hello, I'm Luchia.
-				%h1.home
-					Designer. Traveler. Do-er of things.
+			.col-md-offset-5.col-md-7
+				%p.home To say 2014 exceeded my expectations would be an understatement. I've been given incredible opportunities to work on interesting projects.
+
+				%p.home It's with a little sadness but some relief that I'm shutting down my website to slow down enquiries for the foreseeable future. One of my goals when I started consulting was to produce quality, both in my service to my clients and the results I produce. This is still very important to me and I am looking forward to continuing to work with my existing clients.
+
+				%p.home I will continue to answer emails (albeit at a slower rate) or you can add me on Skype if you have any questions. I apologise for any inconvenience.
 
 				%br
-				%br
-
 				.row
-					-@portfolios.each do |portfolio|
-						.col-md-4.img-responsive
-							=link_to markdown(portfolio.content).first(72).html_safe, portfolio
+					.col-md-1
+						%p=link_to 'Email', 'mailto:hello@luchia.com.au'
+					.col-md-2
+						%p=link_to 'or Skype', 'skype:lucybloomfield92?call'
