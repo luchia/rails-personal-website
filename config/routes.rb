@@ -14,8 +14,6 @@ Luchia::Application.routes.draw do
 
   post 'emailapi/subscribe' => 'emailapi#subscribe'
 
-
-
   controller :sessions do
     get 'login' => :new
     post 'login' => :create
