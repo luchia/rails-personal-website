@@ -4,14 +4,6 @@ Luchia::Application.routes.draw do
   resources :portfolios
   resources :journals
 
-  get 'admin' => 'admin#index'
-  get 'contact' => 'contact#index'
-  get 'portfolios' => 'portfolios#index'
-  get 'journals' => 'journals#index'
-  get 'users' => 'users#index'
-  get 'tags' => 'tags#index'
-  get 'about' => 'about#index'
-
   post 'emailapi/subscribe' => 'emailapi#subscribe'
 
   controller :sessions do

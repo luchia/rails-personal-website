@@ -1,5 +1,4 @@
 class JournalsController < ApplicationController
-  skip_before_action :authorize, only: [:index, :show]
   before_action :set_journal, only: [:show, :edit, :update, :destroy]
 
   # GET /journals
