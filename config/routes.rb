@@ -2,7 +2,7 @@ Luchia::Application.routes.draw do
   resources :tags
   resources :users
   resources :portfolios
-  resources :journals
+  resources :journalsw
 
   post 'emailapi/subscribe' => 'emailapi#subscribe'
 
