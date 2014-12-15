@@ -6,7 +6,7 @@ Luchia::Application.routes.draw do
 
   post 'emailapi/subscribe' => 'emailapi#subscribe'
 
-  get 'journals' => 'journals#index'
+  get 'journals', as: 'journals'
 
   controller :sessions do
     get 'login' => :new
